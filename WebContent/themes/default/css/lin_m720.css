@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+
+.ban_wrapper { width: auto; padding:0 10px;}
+.ban_follow,.ban_slogan,.ban_tel,.ban_summary_text_reg { display:none}
+.ban_title { display:block; margin-top:0px; padding:10px 0; background-image: url(../images/headbg.png); background-repeat: no-repeat; background-position: left bottom; }
+.ban_logo { margin: 0; display:block;}
+.ban_head,.ban_headbg,.ban_nav { height:auto}
+.ban_nav { position: static}
+.ban_headbg { background-image:none}
+.ban_nav_a:after { content:normal}
+
+.main_visual, .main_image, .main_image ul, .main_image li, .main_image li span, .main_image li a { height:250px !important}
+.ban_total { float:left; border-top:1px solid #ccc; padding:10px 0 0 5px;}
+.ban_total_li { border-left:none;padding: 0; margin-right:40px}
+.ban_summary_text_more { margin: 5px 0; white-space: nowrap; display: inline-block }
+.ban_summary_img { background-size:cover}
+.ban_summary_img_li { width:100%;}
+
+.ban_blink_index { position:fixed; bottom:0; width:100%; border-top:1px solid #999; padding:5px 0; z-index:9 }
+.ban_index_ad1_bg {/*text-shadow:#f8f8f8 1px 0 0,#f8f8f8 0 1px 0,#f8f8f8 -1px 0 0,#f8f8f8 0 -1px 0;*/}
+
+.ban_flink { position:static; display:block;margin-left:0; margin-top:20px; width:auto}
+.ban_bottom_tel_n { position:static; margin-left:0}
+.ban_qrcode { float:none; clear:both; position:static; padding-top:20px; overflow:hidden}
+.ban_qrcode_li { padding:0 20px 0 0; height:auto}
+.ban_qrcode_img { position:static; top:0}
+.ban_qrcode_img:hover {position: static; width: 80px; border:none} 
+.ban_bottom_nav_ul { margin:0px -20px 0 0; }
+.ban_bottom_nav_li { display:inline; margin-right:20px; display:inline-block; padding-bottom:10px }
+.ban_bottom_nav_a { white-space: nowrap}
+.ban_index_news_imgs { float:none; margin-bottom:10px}
+.ban_index_news_l { width:auto; float:none}
+.ban_index_news_l .ban_index_news_li { margin-left:0;}
+.ban_index_news_r { float:none}
+.ban_investor_cell_m,.ban_investor_h_m { padding-right:10px; width:50%}
+.ban_investor_h_t,.ban_investor_cell_t { display:none}
+.ban_investor_h_id,.ban_investor_cell_id { width:50%}
+.ban_petty_li  { width:100%}
+.ban_index_project_a,.ban_index_attorn_a { margin-bottom:20px}
+.ban_index_ad1_bg,.ban_index_ad2_bg,.ban_index_ad3_bg { background-image:none; height: auto; overflow:hidden;;}
+.ban_index_ad1_c,.ban_index_ad2_c,.ban_index_ad3_c { padding:20px 0}
+
+/*项目列表*/
+.ban_project_head_info { width:auto; overflow:hidden; clear:both; float:none}
+.ban_projest_time { padding:10px 20px 10px 0}
+.ban_projest_t { white-space:normal}
+.ban_projest_b {}
+.ban_project_head_tool { float:none; border-top:1px solid #ccc; margin-top:10px; padding-top:10px; overflow:hidden}
+.ban_project_head { height:auto; overflow:hidden}
+.ban_project_cue {border-left:none;padding: 5px 0px;  margin-left: 0px;}
+.ban_project_head_tool { clear:both}
+.ban_project_rate { display:none}
+.ban_project_m_li2 { border:none}
+.ban_project_m_ul { margin-left:0}
+.ban_project_m_li1,.ban_project_m_li2,.ban_project_m_li3 { padding:0 20px 0 0}
+.ban_project_d3_detailed {padding-left:0}
+.ban_project_u3 { margin-right:10px}
+.ban_page_list_icon { display:none}
+
+/*项目详细*/
+.ban_detailed_buy { float:none; clear:both; overflow:hidden; border-bottom:1px solid #CCC; padding-bottom:20px; margin-bottom:20px; width:auto}
+.ban_detailed_info { margin-right:0;}
+
+.ban_project_photo {height:250px; opacity:1}
+.ban_project_photo:hover { height:250px;opacity:1}
+.ban_project_photo .main_visual,.ban_project_photo .main_image,.ban_project_photo .main_image ul,.ban_project_photo .main_image li,.ban_project_photo .main_image li span,.ban_project_photo .main_image li a { height:250px}
+.ban_project_photo:hover .main_visual,.ban_project_photo:hover .main_image,.ban_project_photo:hover .main_image ul,.ban_project_photo:hover .main_image li,.ban_project_photo:hover .main_image li span,.ban_project_photo:hover .main_image li a { height:250px}
+
+.ban_project_photo .main_image li span { background-size:cover; background-position:center}
+.ban_circle_rate { display:none;}
+.ban_detailed_id { display:block; margin:0}
+.ban_detailed_label_li { margin-bottom:10px}
+
+
+	
+/*	.ban_top,.ban_sidenav,.text03,.youlian,.foot_textlink,.foot,.path { display:none;}
+	.ban_main { margin:5px;}
+	.ban_news { margin-top:50px; background-color:#f8f8f8}
+	
+.ban_article_ul { margin-top:20px}	
+.ban_article_li { margin:0px 10px 10px; border:1px solid #eee; list-style:none outside; box-shadow:1px 1px 3px #ddd; padding:0; background-color:#FFF; }
+.ban_article_li_t { font-size:22px; color:#666;}
+.ban_article_li_a {padding:20px; }
+	
+	
+.ban_head,.ban_title { height:50px;}
+.ban_head {background-image: url(../images/head-bg.png); background-repeat: no-repeat; background-position: center center; background-size:cover; position:fixed; top:0px; width:100%; }
+.ban_title,.ban_slogan { display:inline-block;margin-top:0px;}
+.ban_title { color:#FFF; font-size:24px; line-height:50px; margin-left:20px;}
+.ban_title:after { content: " " attr(title) "";}
+.ban_logo { display:none;}
+.ban_slogan { font-size:14px; margin-left:15px; padding-left:15px; border-left:1px solid #a0a0a0; position:relative; display:none }
+.ban_slogan_stress { font-size:20px;}
+.ban_nav { float:right; line-height:120px; display:none}
+.ban_nav_li { float:left;}
+.ban_nav_a { display: inline-block; padding: 5px 0; margin-left:20px; color: #414141; text-decoration: none; font-size:16px;}
+	
+.ban_article { padding:20px;}	
+.ban_article_text { font-size:16px;}*/
+.ban_wrapper { width: auto; padding:0 10px;}
+.ban_follow,.ban_slogan,.ban_tel,.ban_summary_text_reg { display:none}
+.ban_title { display:block; margin-top:0px; padding:10px 0; background-image: url(../images/headbg.png); background-repeat: no-repeat; background-position: left bottom; }
+.ban_logo { margin: 0; display:block;}
+.ban_head,.ban_headbg,.ban_nav { height:auto}
+.ban_nav { position: static}
+.ban_headbg { background-image:none}
+.ban_nav_a:after { content:normal}
+
+.main_visual, .main_image, .main_image ul, .main_image li, .main_image li span, .main_image li a { height:250px !important}
+.ban_total { float:left; border-top:1px solid #ccc; padding:10px 0 0 5px;}
+.ban_total_li { border-left:none;padding: 0; margin-right:40px}
+.ban_summary_text_more { margin: 5px 0; white-space: nowrap; display: inline-block }
+.ban_summary_img { background-size:cover}
+.ban_summary_img_li { width:100%;}
+
+.ban_blink_index { position:fixed; bottom:0; width:100%; border-top:1px solid #999; padding:5px 0; z-index:9 }
+.ban_index_ad1_bg {/*text-shadow:#f8f8f8 1px 0 0,#f8f8f8 0 1px 0,#f8f8f8 -1px 0 0,#f8f8f8 0 -1px 0;*/}
+
+.ban_flink { position:static; display:block;margin-left:0; margin-top:20px; width:auto}
+.ban_bottom_tel_n { position:static; margin-left:0}
+.ban_qrcode { float:none; clear:both; position:static; padding-top:20px; overflow:hidden}
+.ban_qrcode_li { padding:0 20px 0 0; height:auto}
+.ban_qrcode_img { position:static; top:0}
+.ban_qrcode_img:hover {position: static; width: 80px;; border:none} 
+.ban_bottom_nav_ul { margin:0px -20px 0 0; }
+.ban_bottom_nav_li { display:inline; margin-right:20px; display:inline-block; padding-bottom:10px }
+.ban_bottom_nav_a { white-space: nowrap}
+.ban_index_news_imgs { float:none; margin-bottom:10px}
+.ban_index_news_l { width:auto; float:none}
+.ban_index_news_l .ban_index_news_li { margin-left:0;}
+.ban_index_news_r { float:none}
+.ban_investor_cell_m,.ban_investor_h_m { padding-right:10px; width:50%}
+.ban_investor_h_t,.ban_investor_cell_t { display:none}
+.ban_investor_h_id,.ban_investor_cell_id { width:50%}
+.ban_petty_li  { width:100%}
+.ban_index_project_a,.ban_index_attorn_a { margin-bottom:20px}
+.ban_index_ad1_bg,.ban_index_ad2_bg,.ban_index_ad3_bg { background-image:none; height: auto; overflow:hidden;;}
+.ban_index_ad1_c,.ban_index_ad2_c,.ban_index_ad3_c { padding:20px 0}
+
+/*项目列表*/
+.ban_project_head_info { width:auto; overflow:hidden; clear:both; float:none}
+.ban_projest_time { padding:10px 20px 10px 0}
+.ban_projest_t { white-space:normal}
+.ban_projest_b {}
+.ban_project_head_tool { float:none; border-top:1px solid #ccc; margin-top:10px; padding-top:10px; overflow:hidden}
+.ban_project_head { height:auto; overflow:hidden}
+.ban_project_cue {border-left:none;padding: 5px 0px;  margin-left: 0px;}
+.ban_project_head_tool { clear:both}
+.ban_project_rate { display:none}
+.ban_project_m_li2 { border:none}
+.ban_project_m_ul { margin-left:0}
+.ban_project_m_li1,.ban_project_m_li2,.ban_project_m_li3 { padding:0 20px 0 0}
+.ban_project_d3_detailed {padding-left:0}
+.ban_project_u3 { margin-right:10px}
+.ban_page_list_icon { display:none}
+
+/*项目详细*/
+.ban_detailed_buy { float:none; clear:both; overflow:hidden; border-bottom:1px solid #CCC; padding-bottom:20px; margin-bottom:20px; width:auto}
+.ban_detailed_info { margin-right:0;}
+
+.ban_project_photo {height:250px; opacity:1}
+.ban_project_photo:hover { height:250px;opacity:1}
+.ban_project_photo .main_visual,.ban_project_photo .main_image,.ban_project_photo .main_image ul,.ban_project_photo .main_image li,.ban_project_photo .main_image li span,.ban_project_photo .main_image li a { height:250px}
+.ban_project_photo:hover .main_visual,.ban_project_photo:hover .main_image,.ban_project_photo:hover .main_image ul,.ban_project_photo:hover .main_image li,.ban_project_photo:hover .main_image li span,.ban_project_photo:hover .main_image li a { height:250px}
+
+.ban_project_photo .main_image li span { background-size:cover; background-position:center}
+.ban_circle_rate { display:none;}
+.ban_detailed_id { display:block; margin:0}
+.ban_detailed_label_li { margin-bottom:10px}
+
+
+	
+/*	.ban_top,.ban_sidenav,.text03,.youlian,.foot_textlink,.foot,.path { display:none;}
+	.ban_main { margin:5px;}
+	.ban_news { margin-top:50px; background-color:#f8f8f8}
+	
+.ban_article_ul { margin-top:20px}	
+.ban_article_li { margin:0px 10px 10px; border:1px solid #eee; list-style:none outside; box-shadow:1px 1px 3px #ddd; padding:0; background-color:#FFF; }
+.ban_article_li_t { font-size:22px; color:#666;}
+.ban_article_li_a {padding:20px; }
+	
+	
+.ban_head,.ban_title { height:50px;}
+.ban_head {background-image: url(../images/head-bg.png); background-repeat: no-repeat; background-position: center center; background-size:cover; position:fixed; top:0px; width:100%; }
+.ban_title,.ban_slogan { display:inline-block;margin-top:0px;}
+.ban_title { color:#FFF; font-size:24px; line-height:50px; margin-left:20px;}
+.ban_title:after { content: " " attr(title) "";}
+.ban_logo { display:none;}
+.ban_slogan { font-size:14px; margin-left:15px; padding-left:15px; border-left:1px solid #a0a0a0; position:relative; display:none }
+.ban_slogan_stress { font-size:20px;}
+.ban_nav { float:right; line-height:120px; display:none}
+.ban_nav_li { float:left;}
+.ban_nav_a { display: inline-block; padding: 5px 0; margin-left:20px; color: #414141; text-decoration: none; font-size:16px;}
+	
+.ban_article { padding:20px;}	
+.ban_article_text { font-size:16px;}*/
+.ban_wrapper { width: auto; padding:0 10px;}
+.ban_follow,.ban_slogan,.ban_tel,.ban_summary_text_reg { display:none}
+.ban_title { display:block; margin-top:0px; padding:10px 0; background-image: url(../images/headbg.png); background-repeat: no-repeat; background-position: left bottom; }
+.ban_logo { margin: 0; display:block;}
+.ban_head,.ban_headbg,.ban_nav { height:auto}
+.ban_nav { position: static}
+.ban_headbg { background-image:none}
+.ban_nav_a:after { content:normal}
+
+.main_visual, .main_image, .main_image ul, .main_image li, .main_image li span, .main_image li a { height:250px !important}
+.ban_total { float:left; border-top:1px solid #ccc; padding:10px 0 0 5px;}
+.ban_total_li { border-left:none;padding: 0; margin-right:40px}
+.ban_summary_text_more { margin: 5px 0; white-space: nowrap; display: inline-block }
+.ban_summary_img { background-size:cover}
+.ban_summary_img_li { width:100%;}
+
+.ban_blink_index { position:fixed; bottom:0; width:100%; border-top:1px solid #999; padding:5px 0; z-index:9 }
+.ban_index_ad1_bg {/*text-shadow:#f8f8f8 1px 0 0,#f8f8f8 0 1px 0,#f8f8f8 -1px 0 0,#f8f8f8 0 -1px 0;*/}
+
+.ban_flink { position:static; display:block;margin-left:0; margin-top:20px; width:auto}
+.ban_bottom_tel_n { position:static; margin-left:0}
+.ban_qrcode { float:none; clear:both; position:static; padding-top:20px; overflow:hidden}
+.ban_qrcode_li { padding:0 20px 0 0; height:auto}
+.ban_qrcode_img { position:static; top:0}
+.ban_qrcode_img:hover {position: static; width: 80px;; border:none} 
+.ban_bottom_nav_ul { margin:0px -20px 0 0; }
+.ban_bottom_nav_li { display:inline; margin-right:20px; display:inline-block; padding-bottom:10px }
+.ban_bottom_nav_a { white-space: nowrap}
+.ban_index_news_imgs { float:none; margin-bottom:10px}
+.ban_index_news_l { width:auto; float:none}
+.ban_index_news_l .ban_index_news_li { margin-left:0;}
+.ban_index_news_r { float:none}
+.ban_investor_cell_m,.ban_investor_h_m { padding-right:10px; width:50%}
+.ban_investor_h_t,.ban_investor_cell_t { display:none}
+.ban_investor_h_id,.ban_investor_cell_id { width:50%}
+.ban_petty_li  { width:100%}
+.ban_index_project_a,.ban_index_attorn_a { margin-bottom:20px}
+.ban_index_ad1_bg,.ban_index_ad2_bg,.ban_index_ad3_bg { background-image:none; height: auto; overflow:hidden;;}
+.ban_index_ad1_c,.ban_index_ad2_c,.ban_index_ad3_c { padding:20px 0}
+
+/*项目列表*/
+.ban_project_head_info { width:auto; overflow:hidden; clear:both; float:none}
+.ban_projest_time { padding:10px 20px 10px 0}
+.ban_projest_t { white-space:normal}
+.ban_projest_b {}
+.ban_project_head_tool { float:none; border-top:1px solid #ccc; margin-top:10px; padding-top:10px; overflow:hidden}
+.ban_project_head { height:auto; overflow:hidden}
+.ban_project_cue {border-left:none;padding: 5px 0px;  margin-left: 0px;}
+.ban_project_head_tool { clear:both}
+.ban_project_rate { display:none}
+.ban_project_m_li2 { border:none}
+.ban_project_m_ul { margin-left:0}
+.ban_project_m_li1,.ban_project_m_li2,.ban_project_m_li3 { padding:0 20px 0 0}
+.ban_project_d3_detailed {padding-left:0}
+.ban_project_u3 { margin-right:10px}
+.ban_page_list_icon { display:none}
+
+/*项目详细*/
+.ban_detailed_buy { float:none; clear:both; overflow:hidden; border-bottom:1px solid #CCC; padding-bottom:20px; margin-bottom:20px; width:auto}
+.ban_detailed_info { margin-right:0;}
+
+.ban_project_photo {height:250px; opacity:1}
+.ban_project_photo:hover { height:250px;opacity:1}
+.ban_project_photo .main_visual,.ban_project_photo .main_image,.ban_project_photo .main_image ul,.ban_project_photo .main_image li,.ban_project_photo .main_image li span,.ban_project_photo .main_image li a { height:250px}
+.ban_project_photo:hover .main_visual,.ban_project_photo:hover .main_image,.ban_project_photo:hover .main_image ul,.ban_project_photo:hover .main_image li,.ban_project_photo:hover .main_image li span,.ban_project_photo:hover .main_image li a { height:250px}
+
+.ban_project_photo .main_image li span { background-size:cover; background-position:center}
+.ban_circle_rate { display:none;}
+.ban_detailed_id { display:block; margin:0}
+.ban_detailed_label_li { margin-bottom:10px}
+
+
+	
+/*	.ban_top,.ban_sidenav,.text03,.youlian,.foot_textlink,.foot,.path { display:none;}
+	.ban_main { margin:5px;}
+	.ban_news { margin-top:50px; background-color:#f8f8f8}
+	
+.ban_article_ul { margin-top:20px}	
+.ban_article_li { margin:0px 10px 10px; border:1px solid #eee; list-style:none outside; box-shadow:1px 1px 3px #ddd; padding:0; background-color:#FFF; }
+.ban_article_li_t { font-size:22px; color:#666;}
+.ban_article_li_a {padding:20px; }
+	
+	
+.ban_head,.ban_title { height:50px;}
+.ban_head {background-image: url(../images/head-bg.png); background-repeat: no-repeat; background-position: center center; background-size:cover; position:fixed; top:0px; width:100%; }
+.ban_title,.ban_slogan { display:inline-block;margin-top:0px;}
+.ban_title { color:#FFF; font-size:24px; line-height:50px; margin-left:20px;}
+.ban_title:after { content: " " attr(title) "";}
+.ban_logo { display:none;}
+.ban_slogan { font-size:14px; margin-left:15px; padding-left:15px; border-left:1px solid #a0a0a0; position:relative; display:none }
+.ban_slogan_stress { font-size:20px;}
+.ban_nav { float:right; line-height:120px; display:none}
+.ban_nav_li { float:left;}
+.ban_nav_a { display: inline-block; padding: 5px 0; margin-left:20px; color: #414141; text-decoration: none; font-size:16px;}
+	
+.ban_article { padding:20px;}	
+.ban_article_text { font-size:16px;}*/

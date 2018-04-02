@@ -1,0 +1,29 @@
+#pager {
+    font-size: 12px;
+    padding: 5px 0  20px 0;
+    text-align: center;
+    color: #2e6ab1;
+}
+
+#pager a,.active {
+	background-color:#eaeaea;
+	display:inline-block;
+    color: #d9272e;
+    margin: 0 2px;
+    padding: 5px 10px;
+    text-decoration: none;
+	font-size:16px;
+	vertical-align:middle;
+	border-radius:5px;
+}
+#pager a:hover {
+	background-color:#FFF
+}
+
+#pager .active,#pager .active:hover {
+    background-color: #d9272e;
+    color: #fff;
+}
+
+.ban_table_page #pager { padding:0}
+.ban_table_page #pager a,.ban_table_page .active { font-size:14px; padding:3px 10px;}

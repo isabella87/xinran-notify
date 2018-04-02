@@ -1,0 +1,1580 @@
+@charset "utf-8";
+html {min-height: 100%;_height:100%}
+body { margin: 0px; padding: 0; background-color:#474747; min-height: 100%;_height:100%}
+form { margin:0; padding:0}
+body,td,th { font-size: 14px; font-size:0.875rem; font-family: "微软雅黑", "宋体"; color:#525252  }
+ul { margin: 0; padding: 0; list-style-position: inside; list-style-type: none; }
+/*a {-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+*/body a { outline:none; }
+img { border: none}
+.ban_font_red_color { color: #d9272e}
+.ban_font_green_color { color: #20ae1e}
+
+.ban_wrapper {width:1025px; margin:auto; font-size:14px; position:relative}
+.ban_sidebar { float:left; width:200px; min-height: 500px }
+.ban_main { float: center; width: 775px;height:600px;margin-left:300px }
+
+
+.ban_sidenav {}
+.ban_sidenav_li,.ban_sidenav_2_li {list-style:none outside; padding:0px}
+.ban_sidenav_li { margin-bottom:1px;}
+.ban_sidenav_a { background-color:#efefef; font-size:16px; display:block; padding:10px 20px 10px 45px; text-decoration: none; color:#666; }
+.ban_sidenav_2_ul {background-color:#f3f3f3;}
+.ban_sidenav_2_li {margin:0px }
+.ban_sidenav_2_a { font-size:13px; display:block; padding:10px 20px 10px 65px; text-decoration: none; color:#666}
+.ban_sidenav .ban_current { background-color:#d9272e; color:#FFF; font-size: 16px; }
+.ban_sidenav_a:hover,.ban_sidenav_2_a:hover { background-color:#d9272e; color:#FFF}
+
+
+
+.ban_page_info { padding:5px 0}
+
+.ban_button_back { display: block; width:50px; background-color: #eee; color: #333; padding: 5px 20px; text-align:center; font-size: 14px; margin: 20px auto; text-decoration: none;  }
+
+.ban_top { background-color:#474747; height:40px;}
+.ban_tel,.ban_follow,.ban_top_reg,.ban_top_login,.ban_top_link,.ban_top_link_a,.ban_top_id_a  { font-size: 14px; color: #f8f8f8; height: 40px; line-height: 40px; text-decoration: none; }
+.ban_tel,.ban_follow { float:left; margin-right:25px}
+.ban_tel:before {content:url(../images/ban_tel.png); vertical-align:middle; margin-right:5px; top:2px; position:relative}
+.ban_top_reg,.ban_top_login,.ban_top_link,.ban_top_id,.ban_top_help { float:right; margin-left:10px}
+
+.ban_tel_num { font-size: 18px; font-family: Georgia, "Times New Roman", Times, serif; font-weight: bold; }
+.ban_follow { margin-left:-12px;}
+.ban_follow:before { content:"　"; vertical-align:middle}
+.ban_follow_a { display: inline-block; vertical-align:middle; margin-left:5px; position:relative; top:0px; width:30px; height:30px; border-radius:30px; background-color:#3c3c3c; vertical-align:middle}
+.ban_follow_img { opacity:.7; border:none;}
+.ban_follow_info { display:none;z-index:9999; position:absolute; top:37px; left:-3px; background-color:#f8f8f8; padding:5px 10px; border:1px solid #ccc; box-shadow:2px 2px 2px #ccc; border-radius:5px}
+.ban_follow_a:hover .ban_follow_info { display:block;}
+.ban_follow_info:before,.ban_follow_info:after { content:""; display:block; position:absolute;  box-sizing:border-box; width:7px; height:7px; border-top:7px solid transparent; border-left:7px solid transparent; border-right:7px solid transparent; border-bottom:7px solid #ccc;top:-14px; left:10px;}
+.ban_follow_info:after {border-bottom:7px solid #f8f8f8;top:-13px; left:10px;}
+.ban_follow_info_li { display:inline-block; padding:0px 10px 10px 10px}
+.ban_follow_info_t { margin: 0; padding: 0; font-size: 18px; font-weight: normal; color:#525252}
+.ban_follow_info_img { width:150px;}
+.ban_follow_a:hover .ban_follow_img { opacity:1}
+.ban_top_login_a,.ban_top_reg_a,.ban_top_help_a { display:inline-block; color: #f8f8f8; padding:0px 10px; margin:8px 0 0 0; line-height:25px; border-radius:3px; text-decoration: none; position:relative}
+.ban_top_login_a { background-color:#d9272e;}
+.ban_top_reg_a { background-color:#20ad1e;}
+.ban_top_help_a { background-color:#62ccd1;}
+.ban_account_msg { position:absolute; top:-4px; left:-5px; background-color:#d9272e; border:2px solid #d9272e; box-sizing:border-box; font-size:12px; height:12px; width:12px; border-radius:6px; padding:0; margin:0;box-shadow:1px 1px 2px #666;animation: ban_account_msg 1s linear 0s infinite alternate;-webkit-animation: ban_account_msg 1s linear 0s infinite alternate;-moz-animation: ban_account_msg 1s linear 0s infinite alternate;-o-animation: ban_account_msg 1s linear 0s infinite alternate; }
+.ban_account_msg_t { display:none;}
+
+@keyframes ban_account_msg
+{
+from {border-color: #d9272e;}
+to { border-color:#ff676d}
+}
+@-moz-keyframes ban_account_msg /* Firefox */
+{
+from {border-color: #d9272e;}
+to {border-color:#ff676d}
+}
+@-webkit-keyframes ban_account_msg /* Safari 和 Chrome */
+{
+from {border-color: #d9272e;}
+to {border-color:#ff676d}
+}
+@-o-keyframes ban_account_msg /* Opera */
+{
+from {border-color: #d9272e;}
+to {border-color:#ff676d}
+}
+
+.ban_head,.ban_nav { height:120px;}
+.ban_head { background-color: #f8f8f8;border-bottom:1px solid #d7d7d7; }
+.ban_headbg { background-image: url(../images/headbg.png); background-repeat: no-repeat; background-position: 60px bottom; zoom:1; position:relative;height:120px;}
+.ban_logo_img { border:none}
+.ban_title,.ban_slogan { display:inline-block; vertical-align:middle; margin-top:25px;}
+.ban_slogan { font-size:14px; margin-left:10px; padding-left:15px; border-left:1px solid #a0a0a0; position:relative; letter-spacing: 3px; color:#888 }
+.ban_slogan_stress { font-size:20px; letter-spacing: 0px; color:#000}
+.ban_nav { position:absolute; right:0px; top:80px; /*line-height:120px;*/}
+.ban_nav_ul { margin:0; padding:0}
+.ban_nav_li { float: left; list-style-position: inside; list-style-type: none; }
+.ban_nav_a { display: inline-block; padding: 5px 0; margin-left:20px; color: #414141; text-decoration: none; font-size:16px; overflow:hidden}
+.ban_nav_a:after { content: "";  border-bottom:3px solid #d9272e; display:block; margin-top:10px;  opacity:0;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; }
+.ban_nav_a:hover:after { margin-top:5px; opacity:1;}
+.ban_nav_a_current { display: inline-block; padding: 5px 0; margin-left:20px; color: #d9272e; text-decoration: none; font-size:16px; border-bottom:3px solid #d9272e}
+
+.ban_bottom_nav { background-color:#6a6a6a; padding:20px 0; overflow:hidden;}
+.ban_bottom_nav_ul { padding:0; margin:0 -77px 0 0; text-align: center }
+.ban_bottom_nav_li { display:inline; margin-right:77px;}
+.ban_bottom_nav_a { color: #959595; text-decoration: none;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; }
+.ban_bottom_nav_a:hover { color: #f8f8f8;}
+
+.ban_bottom { background-color:#474747; color:#959595; padding:30px 0 20px 0;}
+.ban_bottom:after { content: "."; display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;  }
+.ban_bottom_a { color: #959595; text-decoration: none; }
+.ban_bottom_a:hover { color: #f8f8f8; }
+.ban_copy { line-height:2em; }
+.ban_bottom_tel { position:relative;}
+.ban_bottom_tel_n { font-size:32px; font-size:2rem; position:absolute; bottom:5px; margin-left:10px; color:#cbcbcb; width:280px; display: inline-block}
+
+.ban_flink { display:inline-block; margin-left:230px; bottom:-1px; position:absolute; }
+.ban_flink_li { display:inline-block; margin-right:10px}
+.ban_flink_a1,.ban_flink_a2,.ban_flink_a3,.ban_flink_a4,.ban_flink_a5,.ban_flink_a6 { height: 35px; display: block; opacity: .5; /*-webkit-transition: all .2s ease; -moz-transition: all .2s ease; -o-transition: all .2s ease; -ms-transition: all .2s ease; transition: all .2s ease; */background-repeat: no-repeat; background-position: center bottom; }
+.ban_flink_a1 { width:116px; background-image: url(../images/ban_flink1c.png)}
+.ban_flink_a1:hover { background-image: url(../images/ban_flink1c.png);  opacity:1;}
+.ban_flink_a2 { width:62px; background-image: url(../images/ban_flink2c.png); }
+.ban_flink_a2:hover { background-image: url(../images/ban_flink2c.png);  opacity:1;}
+.ban_flink_a3 { width:39px; background-image: url(../images/ban_flink3c.png); }
+.ban_flink_a3:hover { background-image: url(../images/ban_flink3c.png);  opacity:1;}
+.ban_flink_a4 { width:39px; background-image: url(../images/ban_flink4c.png); }
+.ban_flink_a4:hover { background-image: url(../images/ban_flink4c.png);  opacity:1;}
+.ban_flink_a5 { width:34px; background-image: url(../images/ban_flink5c.png); }
+.ban_flink_a5:hover { background-image: url(../images/ban_flink5c.png);  opacity:1;}
+.ban_flink_a6 { width: 165px; background-image: url(../images/ban_flink6c.png); }
+.ban_flink_a6:hover { background-image: url(../images/ban_flink6c.png);  opacity:1;}
+
+.ban_flink_img { opacity: 1; border:0; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; -o-transition: all .2s ease; -ms-transition: all .2s ease; transition: all .2s ease;}
+.ban_flink_a1:hover .ban_flink_img,.ban_flink_a2:hover .ban_flink_img,.ban_flink_a3:hover .ban_flink_img,.ban_flink_a4:hover .ban_flink_img,.ban_flink_a5:hover .ban_flink_img,.ban_flink_a6:hover .ban_flink_img { display:none} { opacity: 0;}
+
+.ban_link_t { color: #707070; font-family: "微软雅黑", "宋体"; font-weight: normal; padding:0; margin:0 0 5px 0; font-size:1rem}
+.ban_link { border-top:1px solid #616161; margin:0px 0 0 0; padding:20px 0 50px 0; line-height:2em; text-align:left; background-color:#474747;}
+.ban_link:hover .ban_link_t {/* color: #cbcbcb;*/ color: #959595;}
+.ban_textlink_a { /*width: 120px; */ display: inline-block; white-space: nowrap; text-decoration: none; color: #707070; margin: 0 14px 0 0px; }
+.ban_link:hover .ban_textlink_a { color: #959595;}
+.ban_link:hover .ban_textlink_a:hover { color: #f8f8f8; }
+
+.ban_content_in { margin:auto; background-color:#f8f8f8;min-height:500px; }
+
+.ban_qrcode { float:right}
+.ban_qrcode_li { float:left; padding:0 0 0 20px; width:80px; height:105px; position:relative}
+.ban_qrcode_t { margin:0; padding:0; font-size:14px; font-size:0.875rem; text-align:center}
+.ban_qrcode_img {position: absolute; top:17px; right:0; z-index:999; width:80px; margin:8px 0 0 0; opacity:.5;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;} 
+.ban_qrcode_li:hover .ban_qrcode_img {opacity:1; background-color:#ccc;}
+.ban_qrcode_img:hover {opacity:1; position: absolute; width:100px; top:17px; right:0; border:5px solid #FFF;} 
+
+.ban_path { color:#404040; padding:15px 0}
+.ban_path_a { padding: 0 15px; font-size: 14px; font-size: 0.875rem; text-decoration: none; color:#404040 }
+.ban_path_a:hover {color:#d9272e }
+.ban_path_home { background-image: url(../images/path.gif); background-repeat: no-repeat; background-position: left center; display:inline-block;width:14px; height:12px; padding-right:15px }
+
+.ban_page_title { display:block; margin: 0; padding: 20px 0; font-size: 24px; font-weight: normal; text-decoration: none; color:#525252}
+.ban_page_title_s { display:inline-block; margin-left:10px; font-size: 16px; font-size:1rem;  font-weight: normal; color:#999}
+.ban_page_time { font-size: 18px; font-size: 1.125rem; color: #999; position: absolute; bottom: 0; right: 0; white-space: nowrap; }
+.ban_page_time_in { display:inline-block; cursor:pointer; border-radius:5px; padding:3px 10px; position:relative;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+.ban_page_time_in:hover {background-color:#f3f3f3;}
+.ban_page_time_in:after {content: ""; display: inline-block; position:absolute; bottom:6px; box-sizing:border-box; height:5px; width:5px; border-right:5px solid #CCC; border-bottom:5px solid #CCC; border-top:5px solid transparent; border-left:5px solid transparent; opacity:1; background-color:transparent;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; }
+.ban_page_time_in:hover:after { opacity:0}
+.ban_page_time_u { font-size:.5em; margin:0 2px }
+.ban_page_time_reach:after {content: "~"; margin:0 5px 0 15px; font-size:20px; font-size:1.25rem}
+.ban_page_title_tool { float:right; height:40px; position:relative;}
+.ban_page_title_tool:before { content:" "; display: inline; }
+.ban_page_title_tool_logo { vertical-align:bottom; margin:0 0 0 15px; border:none; display:inline-block}
+.ban_page_title_tool .ban_button_hilite,.ban_page_title_tool .ban_button_check,.ban_page_title_tool .ban_button_operate,.ban_page_title_tool .ban_button_disable,.ban_page_title_tool .ban_button_default  { font-size:16px; font-size:1rem; margin-right:0; margin-left:10px}
+
+
+
+.ban_blink { text-align:center; padding:25px 0}
+.ban_blink_p {display:inline; font-size:30px; color:#414141; vertical-align:middle; margin-right:30px}
+.ban_blink_b { display: inline-block; padding: 10px 20px; vertical-align: middle; text-decoration: none; border-radius:5px; font-size:24px; font-size:1.5rem }
+.ban_blink_b:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset;}
+
+.ban_page_tool { position:fixed; bottom:20px; left:50%; margin-left:552px }
+.ban_page_tool_li { margin-bottom: 5px; white-space: nowrap; border:0px solid #ccc; float:left; clear:both;}
+.ban_page_tool_a,.ban_page_tool_ab { display:block; color:#666;border:1px solid transparent; background-color:transparent /* box-shadow:0px 0px 3px #ccc*/ border-radius:5px; overflow:hidden;}
+.ban_page_tool_a:hover,.ban_page_tool_ab { background-color:#fff; box-shadow:0px 0px 3px #ccc;border:1px solid #fff;}
+.ban_page_tool_explain { display:none; vertical-align:middle; padding:0 10px; background-color:#fff; }
+
+.ban_page_tool_a:hover .ban_page_tool_explain { display: inline-block; }
+.ban_page_tool_a:before,.ban_page_tool_ab { content:""; display: inline-block; height:80px; width:80px; vertical-align:middle; background-image: url(../images/ban_page_tool.png);background-repeat: no-repeat; opacity:.5;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; }
+.ban_page_tool_a:hover:before {  background-color:#eee;opacity:1}
+.ban_page_tool_explain_t { margin:0; padding:0}
+/*.ban_page_tool_service:before { background-position: right -80px; }*/
+.ban_page_tool_backtop:before { background-position: right top;}
+.ban_page_tool_news:before { background-position: right bottom;}
+.ban_page_tool_pro:before { background-position: right -160px;}
+/*.ban_page_tool_service:hover:before {background-position: left -80px; }*/
+
+.ban_page_tool_backtop:hover:before { background-position: left top;}
+.ban_page_tool_news:hover:before {background-position: left bottom;}
+.ban_page_tool_pro:hover:before {background-position: left -160px;}
+.ban_kefu_block { height: 72px; padding: 10px 20px 0; display: block; position: absolute; bottom: 4px; border: 1px solid #e2e2e2; left: 82px; background: #fff; }
+.ban_page_tool_ab { background-position: left -80px; opacity: 1; }
+
+.ban_page_cue { background-color:#fffbd3;color:#d9272e; padding:10px 20px; margin:0px; display:block; font-size:16px; font-size:1rem; text-align:center}
+
+.ban_result_succeed,.ban_result_fail { padding: 40px 40px; overflow:hidden}
+.ban_result_succeed:before,.ban_result_fail:before { display:inline-block; margin:0 40px 0 0px; vertical-align:middle; float:left}
+.ban_result_succeed:before {content:url(../images/ban_result_succeed.png); }
+.ban_result_fail:before {content:url(../images/ban_result_fail.png);}
+.ban_result_t {display:block; white-space: normal; margin-left:185px; min-height:165px; }
+.ban_result_depict { font-weight: normal; font-size:24px; font-size:1.5rem; margin:0 0 10px 0; padding:0; display:block; }
+.ban_result_additional { color:#999; padding:0; margin:0; line-height:2em; font-size:16px; font-size:1rem; text-align:left}
+.ban_newbanben { display: inline-block; width: 200px; height: 85px; font-size: 12px; text-decoration: none; background: url(../images/ban_newbanben.jpg) no-repeat; color: #f8bfc2}
+.ban_newbanben i { display: inline-block; width: 70px; padding: 10px 0 0 13px; margin-top: 5px; font-size: 18px; font-weight: bold; color: #fefb00}
+.ban_newbanben em { display: inline-block; width: 90px; vertical-align: top; padding: 23px 0 0;}
+a.ban_newbanben:hover i,a.ban_newbanben:hover em { color: #fff}
+
+/*页面标签*/
+.ban_pagetab { overflow:hidden; margin:0; border-bottom:0px solid #ccc; text-align:center; background-color:#eaeaea;}
+.ban_pagetab li:last-child { border-right:0px solid #ccc;}
+.ban_pagetab_li_pass,.ban_pagetab_li_current,.ban_pagetab_li { display:inline-block; width:220px; text-align:center; padding:5px 0; margin:10px 0; border-left:0px solid #ccc; }
+.ban_pagetab_step { border:5px solid #d9272e; display:inline-block; border-radius:30px; width:30px; height:30px; line-height:30px;font-size:18px; font-size:1.125rem; text-align:center; vertical-align:middle}
+.ban_pagetab_t { display: inline-block; font-weight: normal; font-size:18px; vertical-align:middle; margin-left:8px;}
+.ban_pagetab_li_pass .ban_pagetab_step { border:5px solid #20ad1e; position:relative; font-size:14px; font-size:0.875rem }
+.ban_pagetab_li_pass .ban_pagetab_step:before { content: ""; display:block; position:absolute; top:5px; left:5px; border:10px solid #20ad1e; border-radius:10px;}
+.ban_pagetab_li_pass .ban_pagetab_t { color:#20ad1e }
+.ban_pagetab_li_current .ban_pagetab_step { height:40px; width:40px; line-height:40px; border-radius:40px; font-size:28px; color:#d9272e;}
+.ban_pagetab_li .ban_pagetab_step { border:5px solid #ccc; color:#999}
+.ban_pagetab_li .ban_pagetab_t { color:#999}
+
+
+/*按钮*/
+.ban_button {background-color: #d9272e; color: #f8f8f8; border-radius:5px; border:none; text-decoration: none; display: inline-block; font-size:16px; font-size:1rem; padding:10px 20px; text-align:center; cursor:pointer}
+.ban_button_hilite,.ban_button_check,.ban_button_operate,.ban_button_disable,.ban_button_default {display: inline-block; height: 38px;  line-height: 38px; text-decoration: none; padding:0px 20px; cursor:pointer; border:0px solid transparent; margin:0px 10px 10px 0px; border-radius:5px; text-align:center;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+.ban_button_hilite:hover,.ban_button_check:hover,.ban_button_operate:hover,.ban_button_default:hover { box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_button_hilite {background-color: #d24545; color:#f7f7f7;}
+.ban_button_check {background-color: #07b670; color:#f7f7f7;}
+.ban_button_operate {background-color: #48a3e5; color:#f7f7f7;}
+.ban_button_disable {background-color: #eee; color:#ccc; cursor:default;text-decoration:line-through;}
+.ban_button_default {background-color: #aaa; color:#f7f7f7;}
+
+.ban_bg_hilite {background-color: #d24545; color:#f7f7f7;}
+.ban_bg_check {background-color: #07b670; color:#f7f7f7;}
+.ban_bg_operate {background-color: #48a3e5; color:#f7f7f7;}
+.ban_bg_disable {background-color: #eee; color:#ccc; cursor:default;}
+.ban_bg_default {background-color: #aaa; color:#f7f7f7;}
+.ban_button_b {font-size: 20px;  font-size: 1.25rem;  display: inline-block;  padding: 5px 20px; }
+
+
+/*标题下方消息*/
+.ban_page_topinfo { border-bottom:1px solid #ccc; border-top:1px solid #ccc; background-color:#eee; overflow:hidden; padding:10px 0; margin-top: -1px}
+.ban_page_topinfo_t { margin-left:30px; margin-right:50px}
+.ban_page_topinfo_t:after { content:"："; }
+.ban_page_topinfo_t,.ban_page_topinfo_c { display:inline-block; vertical-align:middle; font-size:16px; height:25px; line-height:25px;}
+.ban_page_topinfo_b { margin:0 30px 0 0; height:25px; line-height:25px; float:right}
+
+
+
+
+/*下载app页面*/
+.ban_download_app_bg { background: #ededed url(../images/ban_download_app_bg.jpg) no-repeat center; height: 672px}
+.ban_downapp_box { padding-top: 60px}
+.ban_downapp_left { float: left; position: relative; width: 460px; height: 500px; background: url(../images/ban_mobie_bg.png) no-repeat 10px 0;}
+.ban_downapp_imgwidth { position: absolute; top: 77px; left: 182px; width: 184px; height: 327px; overflow: hidden}
+.ban_downapp_img { width: 940px; height: 327px; position: absolute; top: 0; left: 0}
+.ban_downapp_img li { display: inline-block; margin: 0; padding: 0; width: 184px; height: 327px; z-index: 0 }
+
+
+.ban_downapp_spoint_ul { position: absolute; top: 485px; left: 230px}
+.ban_downapp_spoint { float: left; margin-right: 10px; width: 9px; height: 9px; overflow: hidden; background-image: url(../images/ban_down_sprite.png);}
+.ban_downapp_spoint { background-position: -381px -12px; }
+.ban_downapp_spoint_cur { background-position: -381px 0; }
+
+.ban_downapp_right { float: right; width: 560px}
+.ban_downapp_h5 { font-size: 42px; margin: 0; padding: 0; font-weight: lighter}
+.ban_downapp_h2 { font-size: 62px; color: #d9272e; margin: 0; padding: 0; font-weight: lighter}
+.ban_downapple { height: 180px; padding-top: 30px; border-bottom: 1px solid #e3e4e4}
+.ban_qrcode_app { float: left; position: relative; height: 180px; width: 175px; }
+.ban_qrcode_box { float: left; width: 330px}
+.ban_qrcode_app_img { position: absolute; top: 0; left: 0; z-index: 99; width: 143px; -webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;} 
+.ban_qrcode_app_img:hover { position: absolute; top: 0; left: 0; width: 195px; border:5px solid #FFF;} 
+
+
+/*--首页顶部banner-*/
+.ban_top_banner,.ban_top_banner2 { width: 100%; background: url(../images/ban_top_banner.jpg) no-repeat center; height: 580px}
+.ban_cloose_banner { position: relative; color: #fff; font-size: 24px; width: 1002px; margin: 0 auto}
+.ban_cloose_banner span { position: absolute; top: 10px; right: 0; cursor: pointer }
+.ban_top_banner2 { position: relative; background: url(../images/ban_top_banner2.jpg) no-repeat center; height: 128px }
+.ban_top_banner2 .ban_cloose_banner { font-size: 18px}
+.ban_top_downapp_a,.ban_top_downapp_i,.ban_top_downapp_a2,.ban_top_downapp_i2 { width: 96px; position: absolute; top:5px}
+.ban_top_downapp_a { left: 468px}
+.ban_top_downapp_i { left: 586px}
+.ban_top_downapp_a:hover { top: 5px; left: 468px; z-index: 9999}
+.ban_top_downapp_i:hover { top: 5px; left: 586px}
+.ban_top_downapp_a2,.ban_top_downapp_i2 { width: 146px; top: 119px}
+.ban_top_downapp_a2 { left: 370px }
+.ban_top_downapp_i2 { left: 540px }
+
+/*.ban_qrcode_img {position: absolute; top:17px; right:0; z-index:999; width:80px; margin:8px 0 0 0; opacity:.5;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;} 
+.ban_qrcode_li:hover .ban_qrcode_img {opacity:1; background-color:#ccc;}
+.ban_qrcode_img:hover {opacity:1; position: absolute; width:100px; top:17px; right:0; border:5px solid #FFF;} 
+*/
+
+.ban_downapple a { display: inline-block; width: 183px; height: 51px; background: url(../images/ban_down_sprite.png) no-repeat; z-index: 9; position: relative}
+.ban_downapple a.ban_downapple_btn { background-position: 0 0; }
+.ban_downapple a.ban_downand_btn { background-position: 0 -60px; }
+.ban_downapple a:hover.ban_downapple_btn { background-position: -190px 0; }
+.ban_downapple a:hover.ban_downand_btn { background-position: -190px -60px; }
+.ban_downapple span { display: block; margin: 10px 0 0 10px; line-height: 24px}
+.ban_downapple em { font-size: 14px; font-weight: bold; display: block}
+
+
+
+
+/*信息盒子*/
+.ban_infobox_w { margin-top:50px}
+.ban_infobox { margin-bottom:20px; position:relative}
+.ban_infobox_label { font-size:16px; font-size:1rem; display:inline-block; width:200px; text-align:right; padding-right:20px; vertical-align:middle;}
+.ban_infobox_label i { font-size: 16px; color: #d9272e; margin-right: 8px; position: relative; top: 2px; font-weight: bold;}
+.ban_infobox_label_choose { display:inline; margin-right:10px; cursor:pointer}
+.ban_infobox_label_choose_in { margin-right:5px; cursor:pointer; width: 15px; height: 15px}
+.ban_infobox_u { font-size:16px; font-size:1rem; display:inline-block; width:32px; text-align:left; padding-left:10px;}
+.ban_infobox_show,.ban_infobox_show_num {font-size:20px; font-size:1.25rem; min-height:38px; line-height:38px; padding:0 8px; border-bottom:1px dashed #ccc}
+.ban_infobox_show_num { text-align:right}
+.ban_infobox_input,.ban_infobox_select,.ban_infobox_textarea { border:1px solid #ccc;font-size:20px; font-size:1.25rem; height:38px; line-height:38px; padding:0 8px; border-radius:5px; width:100%;}
+.ban_infobox_input_num { text-align:right}
+.ban_infobox_textarea { height:100px; font-size:14px; font-size:0.875rem; line-height:1em; padding:10px 8px}
+.ban_infobox_select {padding:0 0px 0 8px;}
+.ban_infobox_select_s2 { width:50%; display:inline-block}
+.ban_infobox_input::-ms-clear{ display:none;}
+.ban_infobox_input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */font-size:16px; font-size:1rem; text-align:left; line-height:38px; padding:0 8px; }
+.ban_infobox_input::-moz-placeholder { /* Mozilla Firefox 19+ */font-size:16px; font-size:1rem; text-align:left;line-height:38px; padding:0 8px;}
+.ban_infobox_input:-ms-input-placeholder {font-size:16px; font-size:1rem; text-align:left;line-height:38px; padding:0 8px;}
+.ban_infobox_input::-webkit-input-placeholder {font-size:16px; font-size:1rem; text-align:left;line-height:38px; padding:0 8px;}
+.ban_infobox_inputbox { width:300px; display:inline-block; vertical-align:middle;}
+.ban_infobox_input_w { padding-right:18px;}
+.ban_infobox_input_w_s { margin-right:110px;}
+.ban_infobox_intool { float:right; width:90px;}
+.ban_infobox_inbutton { background-color: #d9272e; color: #f8f8f8; text-decoration: none; display:block;font-size:16px; font-size:1rem; padding:10px 0; text-align:center; border-radius:5px; }
+.ban_infobox_default { background-color: #aaa; color: #f7f7f7; text-decoration: none; display:block;font-size:16px; font-size:1rem; padding:10px 0; text-align:center; border-radius:5px; }
+.ban_infobox_inbutton:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_infobox_default:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_infobox_cue { position:absolute; display:inline-block; margin:0px 20px 0 20px; background-color:#fcfbfb; border:1px solid #ccc; padding:9px 20px; border-radius:5px; }
+.ban_infobox_cue:before {content: " "; border-top:7px solid transparent; border-bottom:7px solid transparent; border-left:7px solid transparent; border-right:7px solid #ccc; height:14px; width:14px; overflow:hidden; position:absolute; top:13px; left:-14px; box-sizing:border-box;}
+.ban_infobox_cue:after {content: " "; border-top:7px solid transparent; border-bottom:7px solid transparent; border-left:7px solid transparent; border-right:7px solid #fcfbfb; height:14px; width:14px; overflow:hidden; position:absolute; top:13px; left:-13px; box-sizing:border-box;}
+.ban_infobox_cue_warn {color:#d9272e; /*background-color:#fffbd3;padding:5px 10px; display:block;*/ }
+.ban_infobox_bottom { border-top:1px solid #eaeaea; padding:30px 0; margin:50px 20px 0 20px; text-align:center}
+.ban_infobox_bottom .ban_button_hilite,.ban_infobox_bottom .ban_button_check,.ban_infobox_bottom .ban_button_operate,.ban_infobox_bottom .ban_button_disable,.ban_infobox_bottom .ban_button_default  { font-size:16px; font-size:1rem; padding:10px 20px; line-height: normal}
+.ban_infobox_tool { display:inline-block}
+.ban_infobox_tool_ {}
+.ban_infobox_inbulk { line-height:40px;}
+.ban_infobox_inbulk_li { display:inline-block}
+.ban_infobox_inbulk_label { display:inline-block; vertical-align:middle; cursor:pointer; padding-right:20px; font-size:16px;}
+.ban_infobox_inbulk_input { vertical-align:middle; cursor:pointer; height:15px; width: 15px}
+
+.ban_infobox_input_interval { background-image: url(../images/ban_interval_m.gif); background-repeat: no-repeat; background-position: center center; overflow:hidden }
+.ban_infobox_input_interval_l { float:left;width:50%;}
+.ban_infobox_input_interval_r { float:left;width:50%;}
+.ban_infobox_input_interval_l .ban_infobox_input_w { margin-right:7px }
+.ban_infobox_input_interval_r .ban_infobox_input_w { margin-left:7px;}
+
+.ban_infobox_line {}
+.ban_infobox_line .ban_infobox { display:inline-block; border:0px solid #999; margin-right:20px}
+.ban_infobox_line .ban_infobox_label { width:auto}
+.ban_infobox_line .ban_infobox_inputbox { width:200px}
+.ban_infobox_line_b { margin:0 5px 0 0; line-height:40px; height:40px; vertical-align:middle}
+.ban_infobox_date_w { width:350px !important}
+
+.ban_areabg { background-color:#f8f8f8;}
+.ban_areabg_d { background-color:#eee;}
+
+
+.ban_content_t { font-weight: normal; text-decoration: none; margin:0; padding:20px 0 10px 0; font-size:24px; font-size:1.5rem}
+.ban_content_t_s { font-size:.7em; display:inline-block; color:#999; margin-left:20px;}
+.ban_content_t2 { font-weight: normal; text-decoration: none; margin:0; padding:10px 0 5px 0; font-size:16px; font-size:1rem}
+.ban_content_text p { padding:0px; margin:0px; line-height:2em;}
+.ban_content_text_indent { padding-left:25px}
+
+
+/*index*/
+.ban_preinfo { background-color:#eee; padding:10px 0;overflow: hidden;zoom:1;}
+.ban_preinfo_text { float:left}
+.ban_preinfo_text_ul { margin:0; padding:0}
+.ban_preinfo_text_li { margin:0; padding:0; line-height:2em}
+.ban_preinfo_text_a { color: #525252; text-decoration: none; background-image: url(../images/arrow.gif); background-repeat: no-repeat; background-position: left center; padding-left:15px;  }
+.ban_preinfo_text_a:hover { color: #d9272e;  background-position: 5px center;}
+
+.ban_total { float:right;}
+.ban_total_ul {}
+.ban_total_li { float:left; border-left:1px solid #ccc; padding:0px 20px}
+.ban_total_li:hover .ban_total_value {  color: #d9272e;}
+.ban_total_li:last-of-type { padding-right:0px}
+.ban_total_title { margin: 0px; padding:0; font-size: 14px; font-size: 0.875rem; font-weight: normal; }
+.ban_total_text { margin: 0; padding:0;}
+.ban_total_value { font-size: 2em; font-weight: normal;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+.ban_total_unit { margin:0 0 0 5px}
+
+/*-投资需谨慎--*/
+.ban_fengxian_line { width: 530px; border-bottom: 1px solid #ccc; text-align: center; position: relative; bottom: 20px}
+.ban_fengxian_h5 { font-size: 24px; width: 360px; height: 40px; display: inline-block; background: #eee; letter-spacing: 4px; padding: 10px 8px 0 0; position: relative; top: 20px}
+
+.ban_summary { background-color:#f8f8f8;}
+.ban_summary_text { position:relative; padding:20px 0 }
+.ban_summary_text_t { font-size:32px; font-size:2rem; font-weight: normal; padding:0; margin:0; display:inline; vertical-align:middle; color:#333333;}
+.ban_summary_text_more { background-color:#bfbfbf; font-size:16px; font-size:1rem; color: #f8f8f8; text-decoration: none; padding:6px 15px; margin:0px;border-radius:5px; margin:-20px 0 0 20px; vertical-align:middle}
+.ban_summary_text_more:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_summary_text_c { margin:10px 0 0 0; padding:0; font-size:16px; font-size:1rem; color:#666}
+.ban_summary_text_reg {/* position:absolute; top:5px; right:0px;*/ background-color: #20ad1e; font-size: 32px; font-size: 1.5rem; color: #f8f8f8; text-decoration: none; padding:10px 20px; margin:15px 0 0 0;border-radius:5px; float:right;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; }
+.ban_summary_text_reg:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_summary_img { background-image: url(../images/ban_summary_img_bg.png); background-repeat: no-repeat; background-position: center top; border-top:1px solid #d0d0d0; overflow:hidden }
+.ban_summary_img_li { float:left; width:33%; text-align:center; padding:30px 0; vertical-align:top}
+.ban_summary_img_t { color: #333; font-size: 24px; font-size: 1.5rem; font-weight: normal; margin:0; padding:15px 0}
+.ban_summary_img_i { border:none;-webkit-transition: all .5s ease;-moz-transition: all .5s ease;-o-transition: all .5s ease;-ms-transition: all .5s ease;transition: all .5s ease;}
+.ban_summary_img_a:hover .ban_summary_img_i {-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-o-transform:rotateY(360deg);-ms-transform:rotateY(360deg);transform:rotateY(360deg);}
+.ban_summary_img_a { text-decoration: none; }
+.ban_summary_img_c { padding:0 40px; color:#666; margin:0}
+
+
+
+.ban_index_project_a,.ban_index_bhb_a,.ban_index_attorn_a { font-size: 20px; font-size:1.25rem;display: inline-block; padding: 10px 20px; text-decoration: none; border-radius:5px;}
+.ban_index_attorn_lucre,.ban_index_attorn_lucre2,.ban_index_attorn_due,.ban_index_attorn_due2,.ban_index_attorn_sum,.ban_index_attorn_sum2,.ban_index_attorn_rest,
+.ban_index_project_lucre,.ban_index_project_due,.ban_index_project_sum,.ban_index_project_cash,.ban_petty_other { margin:7px;}
+<!--.ban_index_attorn_lucre { margin: 7px 7px 7px 10px; }-->
+.ban_petty_li { background-color:#FFF; width:235px; overflow:hidden; border-radius:0 0 5px 5px; float:left; margin-right:5px; margin-bottom:20px}
+.ban_petty_button { background-color: #d9272e; color: #f8f8f8; text-decoration: none; padding:10px 20px; text-align:center; display:block; font-size:18px; font-size:1.125rem; margin-top:0px;}
+.ban_petty_button:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_petty_head{ margin:10px; padding: 0 0 10px 0; border-bottom:1px solid #eee;}
+.ban_petty_t { font-size: 18px; font-size:1.125rem; padding: 0; margin: 0 0 5px 0; font-weight: normal; height:48px; }
+.ban_petty_t_a { color: #666; text-decoration: none; display:block; }
+.ban_petty_t_a:hover { color: #d9272e; }
+.ban_petty_id {font-size: 12px; font-size:0.75rem; color:#aaa;}
+.ban_petty_rest { text-align:center; font-size:20px; border-top:1px solid #eee; padding:5px 0; margin:10px 0 0 0; height: 38px; color:#777;}
+.ban_index_project_lucre_n,.ban_index_project_due_n,.ban_index_project_sum_n,.ban_index_project_cash_n,.ban_petty_other_n { display:inline-block; width:85px}
+.ban_index_project_lucre_u,.ban_index_project_due_u,.ban_index_project_sum_u,.ban_index_project_cash_u,.ban_petty_other_u { margin-left:6px;}
+.ban_index_project_lucre_v { font-size:32px; font-size: 3em; color:#d9272e}
+.ban_index_project_due_v,.ban_index_project_sum_v,.ban_index_project_cash_v {  color:#666}
+.ban_index_project_cash_v { font-size:18px; font-size:1.125rem; color:#d9272e}
+.ban_index_project_cash { margin-top:7px;}
+.ban_petty_other { margin-top: 7px;}
+
+.ban_petty_rate { margin:-11px 10px 0 10px; border-top:5px solid #fff;border-bottom:5px solid #fff; position:relative}
+.ban_petty_rate_bg { background-color:#eee}
+.ban_petty_rate_c { background-color:#d9272e; height:1px;}
+.ban_petty_rate_v { opacity:0; position:absolute;top:-11px; right:0; padding:1px 0 0 5px; background-color:#fff;-webkit-transition: all .5s ease;-moz-transition: all .5s ease;-o-transition: all .5s ease;-ms-transition: all .5s ease;transition: all .5s ease;}
+/*.ban_petty_rate_v:before {content: "已投资金："; }*/
+.ban_petty_rate:hover .ban_petty_rate_v { display:block; opacity:1; }
+
+
+.ban_index_ad1 .ban_button_hilite,.ban_index_ad2 .ban_button_operate,.ban_index_ad3 .ban_button_hilite,.ban_index_ad2 .ban_button_hilite {font-size: 20px;  font-size: 1.25rem;  display: inline-block;  padding: 5px 20px; margin-top:20px;}
+
+.ban_index_ad1 {background-color:#eee;}
+.ban_index_ad1_bg { background-image: url(../images/index_ad1.png); background-repeat: no-repeat; background-position: right center; height: 530px; }
+.ban_index_ad1_c { padding-top:100px}
+.ban_index_ad1_c1 { font-size:56px; vertical-align:bottom}
+.ban_index_ad1_c2 { font-size:26px; vertical-align:bottom; margin-left:10px}
+.ban_index_ad1_c3 { font-size:36px; display:block;}
+.ban_index_ad1 .ban_button_hilite,.ban_index_ad2 .ban_button_hilite {font-size: 20px;  font-size: 1.25rem;  display: inline-block;  padding: 5px 20px; margin-top:20px;}
+
+.ban_index_ad2 {background-color:#f8f8f8;}
+.ban_index_ad2_bg { background-image: url(../images/index_ad2.png); background-repeat: no-repeat; background-position: left center; height:530px;}
+.ban_index_ad2_c { padding-top:100px; float:right; text-align:right}
+.ban_index_ad2_c1 { font-size:56px; vertical-align:bottom;}
+.ban_index_ad2_c2 { font-size:30px; vertical-align:bottom; color:#d9272e;}
+.ban_index_ad2_c3 { font-size:30px; vertical-align:bottom; }
+.ban_index_ad2_c4 { font-size:18px; display:block; line-height:1.5em; margin-top:10px}
+
+.ban_index_ad3 {background-color:#eee;}
+.ban_index_ad3_bg { background-image: url(../images//index_ad3.png); background-repeat: no-repeat; background-position: right center; height:530px;}
+.ban_index_ad3_c { padding-top:100px;}
+.ban_index_ad3_c1 { font-size:56px; vertical-align:bottom;}
+.ban_index_ad3_c2 { font-size:30px; vertical-align:bottom; margin-left:10px; }
+.ban_index_ad3_c3 { font-size:18px; line-height:1.5em; margin-top:10px;  vertical-align:bottom; display:block }
+
+
+
+.ban_index_project { background-color:#eee; overflow:hidden; padding:100px 0}
+.ban_index_project_text,.ban_index_attorn_text { float:right; text-align:right; width: 304px}
+.ban_index_project_t { font-size: 40px; font-size:2.5rem; padding: 0; margin: 0; font-weight: normal; }
+.ban_index_project_p { font-size: 18px; font-size: 1.125rem; line-height:2em}
+.ban_index_project_p_s { font-size: 30px; color: #d9272e; font-weight: normal; margin-left:10px; }
+.ban_index_project_a { color: #f8f8f8; background-color: #d9272e; }
+.ban_index_project_a:hover { box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+
+.ban_index_bhb { background-color:#eee; overflow:hidden; padding:100px 0}
+.ban_index_bhb_c  { float:right; padding-top: 50px}
+.ban_index_bhb_text { padding-top: 130px}
+.ban_index_bhb_text { float:left; margin-top:0px;}
+.ban_index_bhb_c .ban_bhb_li { display:block; margin-right:0}
+.ban_index_bhb_t {font-size: 40px; font-size:2.5rem; padding: 0; margin: 0; font-weight: normal }
+.ban_index_bhb_p { font-size: 18px; font-size: 1.125rem; line-height:2em}
+
+.ban_index_attorn,.ban_index_attorn_bao { background-color:#f8f8f8; overflow:hidden; padding:100px 0}
+.ban_index_attorn_bao { padding: 0 0 30px}
+.ban_index_attorn_t { font-size: 40px; font-size:2.5rem; padding: 0; margin: 0; font-weight: normal; }
+.ban_index_attorn_p { font-size: 18px; font-size: 1.125rem; line-height:2em}
+.ban_index_attorn_c { float:left}
+.ban_petty_id {font-size: 12px;}
+.ban_index_attorn_a { color: #f8f8f8; background-color: #20ad1e;}
+.ban_index_attorn_a:hover { box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_index_attorn_lucre_v { font-size: 28px; color:#d9272e}
+.ban_index_attorn_lucre2_v {text-decoration:line-through}
+.ban_index_attorn_due_v {  color:#666}
+.ban_index_attorn_sum_v { color:#d9272e; font-size:24px; font-size:1.5rem;}
+.ban_index_attorn_lucre_n,.ban_index_attorn_lucre2_n,.ban_index_attorn_due_n,.ban_index_attorn_due2_n,.ban_index_attorn_sum_n,.ban_index_attorn_sum2_n { margin-right:2px;}
+.ban_index_attorn_lucre_u,.ban_index_attorn_lucre2_u,.ban_index_attorn_due_u,.ban_index_attorn_due2_u,.ban_index_attorn_sum_u,.ban_index_attorn_sum2_u { margin-left:3px;}
+.ban_index_attorn_sum { margin-top:0px; padding-top:0px; border-top:0px solid #eee;}
+
+
+.ban_index_area_t { margin: 0; padding: 0 0 20px 0; font-size: 24px; font-size:1.5rem; font-weight: normal; }
+
+.ban_index_news { overflow:hidden; background-color:#eee; padding:50px 0}
+.ban_index_news_l { float:left; width:642px;}
+.ban_index_news_r { float:right}
+.ban_index_news_box { clear:both; overflow:hidden; margin:0 0 30px 0}
+.ban_index_news_imgs { width:260px; height:160px; float:left; overflow:hidden; padding-right:20px;}
+.ban_index_news_img { width:100%; border:none;}
+.ban_index_news_ul { display: }
+.ban_index_news_li { border-bottom:1px dashed #ccc;}
+.ban_index_news_l .ban_index_news_li { margin-left:280px}
+.ban_index_news_a { color: #666; text-decoration: none; font-size:16px; display:block; padding:5px 0; }
+.ban_index_news_a:hover { color: #d9272e; }
+.ban_index_news_a:before {content: ""; display:inline-block; border-top:7px solid transparent;border-left:7px solid transparent;  border-right:7px solid #d9272e; border-bottom:7px solid #d9272e; height:14px; width:14px; box-sizing:border-box; overflow:hidden; margin:0 12px 3px 0; vertical-align:bottom}
+
+.ban_index_mnews { background-color:#f8f8f8; overflow:hidden; padding:50px 0 30px 0}
+.ban_index_mnews_ul {margin-right:-50px;}
+.ban_index_mnews_li { float:left; margin-right:50px; margin-bottom:20px; width:300px;}
+.ban_index_mnews_logo { width:115px; height:95px; float:left; margin:0 20px 0 0; background-color:#f8f8f8}
+.ban_index_mnews_a {text-decoration: none; color:#666 }
+.ban_index_mnews_time { display:block; margin:10px 0 0 0; font-size:14px; font-size:0.875rem}
+.ban_index_mnews_t { font-weight: normal; margin:0; padding:10px 0 0 0; font-size:16px; font-size:1rem}
+
+.ban_index_investor { overflow:hidden;background-color:#eee; padding:50px 0}
+.ban_index_investor .ban_investor { margin-top:0px}
+.ban_index_investor .ban_investor_h_id,.ban_index_investor .ban_investor_h_m,.ban_index_investor .ban_investor_h_t {background-color:#e2e2e2}
+
+.ban_blink_index { background-color:#f8f8f8;}
+.ban_blink_b_index { background-color:#20ad1e; color:#f8f8f8}
+
+.ban_index_areabg:nth-child(odd) { background-color:#f8f8f8;}
+.ban_index_areabg:nth-child(even) { background-color:#eee;}
+
+/*项目标志*/
+.ban_project_icon_gcd,.ban_project_icon_attorn,.ban_project_icon_new,.ban_project_icon_bhb { float:left;  text-align:center;  border-radius:5px; color:#FFF;margin-right:20px;width:48px; height:48px; line-height:48px; font-size:32px; font-size:2rem; }
+.ban_detailed_head .ban_project_icon_gcd,.ban_detailed_head .ban_project_icon_attorn,.ban_detailed_head .ban_project_icon_new{ float:left; text-align:center;  border-radius:5px; color:#FFF; margin-right:15px;width:36px; height:36px; line-height:34px; font-size:24px; font-size:1.5rem; }
+.ban_project_icon_gcd {background-color:#66d3d8;}
+.ban_project_icon_attorn { background-color:#69a5f6}
+.ban_project_icon_new { background-color:#20ae1e;}
+.ban_project_icon_bhb { background-color:#d24545;}
+.ban_project_icon_yuan_color { background-color:#ffae00; color: #fff; text-align: center}
+
+/*项目*/
+.ban_content,.ban_project,.ban_attorn,.ban_bhb { background-color:#f3f3f3; padding:0 0 20px 0;min-height:600px;}
+.ban_project_ul { }
+.ban_project_li { margin:0 0 30px 0; position:relative}
+.ban_project_head { height:50px; position:relative; background-color:#eaeaea; padding:10px 20px; z-index:0}
+.ban_youxuan_biao { background: url(../images/ban_youxuan_biao.png) no-repeat; position: absolute; top: -12px; left: 380px; width: 90px; height: 95px; z-index: 999}
+.ban_project_head_tool {}
+.ban_page_list_icon {}
+.ban_project_head_info { float: left; white-space: nowrap; }
+.ban_project_m { padding:10px 20px; background-color:#f8f8f8;}
+.ban_projest_t { padding: 0; margin: 0; font-weight: normal; font-size: 24px; font-size: 1.5rem; white-space: nowrap;}
+.ban_projest_time { float:right; font-size:20px; font-size:1.25rem; padding:10px 15px;}
+.ban_projest_id { display: inline-block; font-size:14px; }
+.ban_project_cue { display: inline-block; padding:0px 10px; margin-left:10px; font-size:14px; font-size:0.875rem; border-left:1px solid #ccc; border-bottom:0px solid #ccc; background-color: transparent !important }
+.ban_projest_b { float: right; width:64px; text-align:center; padding: 5px 20px; margin:2px 0;  font-weight: normal; text-decoration: none;  font-size:16px; font-size:1rem; border-radius:5px;}
+.ban_project_m_ul { margin-left:0px; zoom:1}
+.ban_project_m_ul:after{content:"";display:block;clear:both;visibility:hidden;height:0}
+.ban_project_m_li1,.ban_project_m_li2,.ban_project_m_li3 { float:left; font-size:16px; font-size:1rem;}
+.ban_project_m_li1,.ban_project_m_li2 { float:left;  font-size:16px; font-size:1rem;}
+.ban_project_m_li1 { padding:0; width:220px;}
+.ban_project_m_li2 { padding-left:35px; width:210px;}
+.ban_project_m_li3 { padding-left:35px}
+.ban_data_c_dect { font-size: .7em; display: inline-block}
+.ban_project_m_li2 { border-right:1px solid #CCC;  border-left:1px solid #CCC; }
+.ban_project_m_li1 { white-space: nowrap; }
+.ban_project_d1,.ban_project_d2,.ban_project_d3 { margin-top:9px; display:inline-block; margin-left:10px; text-align:right;}
+.ban_project_d1 { font-size:32px; font-size:2rem; color:#d9272e;}
+.ban_project_d2 { font-size:32px; font-size:2rem; width:55px}
+.ban_project_d3 { font-size:32px; font-size:2rem; width:90px}
+.ban_project_d1_int { display:inline-block; width:70px;}
+.ban_project_d3_detailed { display:inline-block; padding-left:10px; font-size:14px; font-size:0.875rem; width:190px}
+.ban_project_d3_detailed_s,.ban_project_d3_detailed_num {margin:0 5px 0 0;/* display:inline-block; width:100px; text-align:right;*/  }
+.ban_project_d3_detailed_s {color:#d9272e; font-size:20px; font-size:1.25rem;}
+.ban_project_d3_detailed_num {}
+.ban_project_u1,.ban_project_u2,.ban_project_u3 { margin-left:5px;}
+.ban_project_u1 { color:#d9272e;}
+.ban_project_u2 { }
+.ban_project_u3 {}
+
+.ban_attorn_m { padding:10px 20px; background-color:#f8f8f8;}
+.ban_attorn_m_ul { overflow:hidden; margin-left:0px;}
+.ban_attorn_m_li1,.ban_attorn_m_li2,.ban_attorn_m_li3 { float:left; font-size:16px; font-size:1rem;}
+.ban_attorn_m_li1 { width:300px; font-size:16px; font-size:1rem;}
+.ban_attorn_m_li2 {border-right:1px solid #CCC;  border-left:1px solid #CCC; padding-left:70px; width:250px; }
+.ban_attorn_m_li3 {padding-left:60px; width:auto }
+.ban_attorn_d1,.ban_attorn_d2,.ban_attorn_d3 { margin-top:9px; display:inline-block; margin-left:10px; text-align:right}
+.ban_attorn_d1 { font-size:32px; font-size:2rem; color:#d9272e;/* width:40px*/}
+.ban_attorn_d2 { font-size:32px; font-size:2rem; width:55px}
+.ban_attorn_d3 { font-size:32px; font-size:2rem; /*width:190px;*/ }
+.ban_attorn_d1_int { display:inline-block;width:70px}
+.ban_attorn_d3_int { display:inline-block;width:160px;}
+.ban_attorn_hilite { color:#d9272e;}
+.ban_attorn_u1,.ban_attorn_u2,.ban_attorn_u3 { margin-left:5px;}
+.ban_attorn_u1 { color:#d9272e;}
+.ban_attorn_u2 { }
+.ban_attorn_u3 {}
+.ban_original1,.ban_original2,.ban_original3 { font-size:14px; padding:5px 0 3px 0;}
+.ban_original1_t:after,.ban_original2_t:after,.ban_original3_t:after {content: "："; margin-right:5px;}
+.ban_original1_u,.ban_original2_u,.ban_original3_u { margin-left:5px;}
+.ban_original1_c {text-decoration:line-through;}
+
+
+.ban_project_rate { float:left;}
+.ban_circle_rate { margin:0 10px 0 15px;  position:relative; }
+.ban_circle_rate_hilite {}
+.ban_circle_rate_hilite:before { content: ""; display: block; position: absolute; top: -3px; left: -3px; height: 56px; width: 56px; border-radius: 56px; opacity:.8; background-image: url(../images/ban_circle_rate_hilite.png); background-repeat: no-repeat; background-position: center center; animation: ban_circle_rate_hilite 2s linear 0s infinite normal;-webkit-animation: ban_circle_rate_hilite 2s linear 0s infinite normal;-moz-animation: ban_circle_rate_hilite 2s linear 0s infinite normal;-o-animation: ban_circle_rate_hilite 2s linear 0s infinite normal; z-index:3 }
+@keyframes ban_circle_rate_hilite
+{
+from {transform:rotate(0deg);}
+to { transform:rotate(-360deg);}
+}
+@-moz-keyframes ban_circle_rate_hilite /* Firefox */
+{
+from {-moz-transform:rotate(0deg);}
+to {-moz-transform:rotate(-360deg);}
+}
+@-webkit-keyframes ban_circle_rate_hilite /* Safari 和 Chrome */
+{
+from {-webkit-transform:rotate(0deg);}
+to {-webkit-transform:rotate(-360deg);}
+}
+@-o-keyframes ban_circle_rate_hilite /* Opera */
+{
+from {-o-transform:rotate(0deg);}
+to {-o-transform:rotate(-360deg);}
+}
+
+
+.ban_circle_rate_bg { background-color:#eee; height:50px; width:50px; border-radius:50px; overflow:hidden;position:relative; z-index:2}
+.ban_circle_rate_c { background-color:#d9272e; width:100%; position:absolute; bottom:0px;-webkit-transition: all .5s ease;-moz-transition: all .5s ease;-o-transition: all .5s ease;-ms-transition: all .5s ease;transition: all .5s ease;}
+.ban_circle_rate_v { opacity:1; position:absolute;top:5px; left:5px; width:40px; height:40px; line-height:40px; border-radius:40px; text-align:center; padding:0; background-color:#fff;z-index:4}
+/*.ban_circle_rate_v:before {content: "已投资金："; }*/
+.ban_circle_rate:hover .ban_circle_rate_c {box-shadow:0px 500px 0px rgba(255,255,255,0.3) inset;}
+
+.ban_strip_rate { margin-top:20px;}
+.ban_strip_rate_bg { background-color:#c8c8c8}
+.ban_strip_rate_c { height:5px;}
+.ban_strip_rate_v { display:none}
+
+
+
+
+/*项目详细*/
+.ban_detailed_head { background-color:#f8f8f8; overflow:hidden;}
+.ban_detailed_title { margin: 0; padding: 10px 20px; font-size: 28px; font-weight: normal; background-color:#eaeaea; overflow:hidden; }
+.ban_detailed_head_title_s {margin: 0; padding: 10px 0 0 0; font-size: 16px; font-size:1rem; font-weight: normal; display:none}
+.ban_detailed_head_title_s:after {content: "";}
+.ban_detailed_head_title_s_note {font-size: 14px;}
+i,em,dfn { font-style: normal}
+.ban_detailed_head_title_s_note i { color: #07b670}
+.ban_detailed_head_title_s_note em { color: #d9272e}
+.ban_detailed_time {float: right;  font-size: 20px;  font-size: 1.25rem;  padding: 6px 0 0 0;}
+.ban_detailed_id { font-size:14px; font-size:0.875rem; margin:0 0 0 20px;}
+.ban_detailed_id:before {content: "["; margin-right:5px;}
+.ban_detailed_id:after {content: "]"; margin-left:5px;}
+.ban_detailed_buy { float:right; margin:0; padding:0 20px 0 20px; width:290px;}
+.ban_detailed_info { padding:0 20px 0 20px; margin-right:330px; border-right:1px solid #eaeaea; position:relative;}
+.ban_detailed_key,.ban_detailed_buy_money { padding:10px 0px; margin:0; border-bottom:1px solid #eaeaea; overflow:hidden;}
+.ban_detailed_key_t { display:inline-block; margin-top:19px;}
+.ban_detailed_key_lucre,.ban_detailed_key_due,.ban_detailed_key_sum,.ban_detailed_key_property { float:left; padding-right: 40px; font-size:16px; font-size:1rem}
+.ban_detailed_key_width { width: 206px}
+.ban_detailed_key_lucre_c,.ban_detailed_key_due_c,.ban_detailed_key_sum_c,.ban_detailed_key_property_c {font-size:35px; margin:0 6px 0 0;}
+.ban_detailed_key_lucre_c,.ban_detailed_key_due_c,.ban_detailed_key_sum_c { margin:0 10px }
+.ban_detailed_key_lucre_c { color:#d9272e;}
+.ban_detailed_check { background-color: #20ae1e; color: #f8f8f8; position: absolute; text-decoration: none; padding:5px 10px; border-radius:3px; bottom:90px; right:20px;}
+.ban_detailed_other { overflow: hidden; padding: 10px 0;padding-right:-38px;}
+.ban_detailed_other_li { float:left; padding:0 20px 5px 0;}
+.ban_detailed_other_li_g { white-space: nowrap; display:inline-block }
+.ban_detailed_other_line { clear:both; margin:0 0 5px 0}
+.ban_detailed_other_t:after {content: "："; margin-right:5px;}
+.ban_detailed_other_former {text-decoration:line-through; }
+.ban_detailed_label { overflow:hidden;margin:5px 0;}
+.ban_detailed_label_li { float:left}
+.ban_detailed_label_score,.ban_detailed_label_a { display: block; padding: 10px 15px; font-size:18px; border: 1px solid #d9272e; border-radius: 5px; margin-right: 10px; color: #d9272e; text-decoration: none; }
+.ban_detailed_label_score { background-color:#20ae1e; border:1px solid #20ae1e; color:#f8f8f8; margin-right:15px; border-radius: 31px; padding: 10px;}
+.ban_detailed_agree {margin:0; padding:10px 0; border-top:1px solid #eaeaea;}
+.ban_detailed_agree_checkbox { margin:0 12px 0 0 ; vertical-align:middle;width: 15px; height: 15px}
+.ban_detailed_agree_text {vertical-align:middle;}
+.ban_detailed_agree_a { text-decoration: none; color:#d9272e;vertical-align:middle; }
+
+.ban_detailed_buy_money {}
+.ban_detailed_buy_money_t { font-size:16px; font-size:1rem;}
+.ban_detailed_buy_money_c { font-size:35px; font-size:2.1875rem; color: #d9272e; margin:0 6px 0 12px;}
+.ban_detailed_buy_money_u { font-size:16px; font-size:1rem;}
+.ban_detailed_buy_invest_input,.ban_detailed_buy_invest_input_readonly { text-align:right; padding:0 10px; box-sizing:border-box; width: 85%; font-size:25px; font-size:1.5625rem; line-height:50px; height:50px; border:1px solid #CCC; border-radius:5px; color:#999; margin:5px 0 0 0;}
+.ban_detailed_buy_invest_input_readonly { background-color:#f8f8f8; cursor:default;}
+.ban_detailed_buy_invest_input::-ms-clear{display:none;}
+.ban_detailed_buy_invest_input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */font-size:16px; font-size:1rem; text-align:left; line-height:50px; }
+.ban_detailed_buy_invest_input::-moz-placeholder { /* Mozilla Firefox 19+ */font-size:16px; font-size:1rem; text-align:left;line-height:50px;}
+.ban_detailed_buy_invest_input:-ms-input-placeholder {font-size:16px; font-size:1rem; text-align:left;line-height:50px;}
+.ban_detailed_buy_invest_input::-webkit-input-placeholder {font-size:16px; font-size:1rem; text-align:left;line-height:50px;}
+.ban_detailed_buy_invest_b { width:100%; font-size:18px; border:none; margin:10px 0 0 0; height:41px; line-height:41px;text-align:center; border-radius:5px;line-height:normal}
+
+.ban_detailed_buy_info {border-top:1px solid #eaeaea; padding:15px 0; margin:20px 0 0 0}
+.ban_detailed_buy_info_cue {background-color:#fffbd3;color:#d9272e; padding:5px 10px; display:block; }
+
+.ban_detailed_balance { padding:10px 0}
+.ban_detailed_balance_t {}
+.ban_detailed_balance_c { margin:0 6px 0 10px;color: #20ae1e; font-size:16px}
+.ban_detailed_balance_u {}
+.ban_detailed_balance_b { display: inline-block; padding: 0 10px; color: #f8f8f8; background-color: #20ae1e; text-decoration: none; font-size:12px; border-radius:3px; margin-left:20px;}
+
+.ban_detailed { margin-top:20px;}
+.ban_detailed_tab { overflow:hidden; height:49px;}
+.ban_detailed_tab_li,.ban_detailed_tab_current { float:left;}
+.ban_detailed_tab_a { display: block; font-size: 18px; font-size:1.125rem; padding: 15px 15px 10px 15px; text-decoration: none; color:#999}
+.ban_detailed_tab_a:hover { border-bottom:5px solid #ccc; padding: 10px 15px 10px 15px; color:#666}
+.ban_detailed_tab_current .ban_detailed_tab_a,.ban_detailed_tab_current .ban_detailed_tab_a:hover { background-color:#f8f8f8; border-top:5px solid #d9272e; border-bottom:none; padding: 10px 15px 10px 15px; color:#666}
+
+.ban_detailed_c:after { clear: both; display: block; content: ""}
+.ban_detailed_c { padding-top: 10px; background-color:#f8f8f8; min-height:300px; padding-right: 15px}
+/*.ban_detailed_c img { float: left; margin: 0 30px 10px 50px}
+*/.ban_detailed_text { padding: 25px; line-height: 30px; font-size: 16px }
+.ban_detailed_text p { text-indent: 30px}
+.ban_detailed_text img { float: left; margin: 0 10px 10px 0}
+
+.ban_investor { margin-top:20px;}
+.ban_investor_table { display:table; width:100%;}
+.ban_investor_row { display:table-row}
+.ban_investor_h_id,.ban_investor_h_m,.ban_investor_h_t { display:table-cell; font-size: 18px; font-size:1.125rem; font-weight: normal; background-color:#ededed; text-align:center; padding:10px 0; width:33% }
+.ban_investor_cell_id,.ban_investor_cell_m,.ban_investor_cell_t { display:table-cell; background-color:#f5f5f5; text-align:center; padding:10px 0; border-bottom:1px solid #ededed; font-size:16px; font-size:1rem;width:33% }
+.ban_investor_h_m,.ban_investor_cell_m { text-align:right; padding-right:120px; width:34%;}
+.ban_investor_h_m { padding-right:140px;}
+.ban_investor_cell_m:after {content: "元"; margin-left:5px;}
+.ban_investor_c { overflow-y:scroll; height:210px;}
+
+.ban_project_photo {overflow:hidden;-webkit-transition: all .2s ease .1s;-moz-transition: all .2s ease .1s;-o-transition: all .2s ease .1s;-ms-transition: all .2s ease .1s;transition: all .2s ease .2s;  height:80px; opacity:0.5}
+.ban_project_photo span {-webkit-transition: all .2s ease .1s;-moz-transition: all .2s ease .1s;-o-transition: all .2s ease .1s;-ms-transition: all .2s ease .1s;transition: all .2s ease .2s;}
+.ban_touzi_jili_box1,.ban_touzi_jili_box2 { float: left; width:500px; height:295px; overflow: hidden; }
+.ban_touzi_jili_box2 { float: right; }
+.ban_touzi_jili_box1 .ban_investor_h_m,.ban_touzi_jili_box2 .ban_investor_h_m { width: 30%; padding: 0; text-align: center; }
+.ban_touzi_jili_box1 .ban_investor_cell_m,.ban_touzi_jili_box2 .ban_investor_cell_m {  padding-right: 9%; }
+.ban_touzi_jili_box1 .ban_investor_h_t,.ban_touzi_jili_box2 .ban_investor_h_t  { width: 30%; padding-right: 4% }
+.ban_touzi_jili_box1 .ban_investor_c,.ban_touzi_jili_box2 .ban_investor_c { overflow: auto; height: auto; }
+
+.ban_project_photo:hover { height:422px;opacity:1}
+.ban_project_photo .main_visual,.ban_project_photo .main_image,.ban_project_photo .main_image ul,.ban_project_photo .main_image li,.ban_project_photo .main_image li span,.ban_project_photo .main_image li a { height:80px;-webkit-transition: all .2s ease .1s;-moz-transition: all .2s ease .1s;-o-transition: all .2s ease .1s;-ms-transition: all .2s ease .1s;transition: all .2s ease .2s;}
+.ban_project_photo .main_image li,.ban_project_photo .main_image li span,.ban_project_photo .main_image li a { height:422px}
+.ban_project_photo:hover .main_visual,.ban_project_photo:hover .main_image,.ban_project_photo:hover .main_image ul { height:422px}
+
+
+
+.ban_detailed_info .ban_circle_rate { margin:0 10px 0 15px;  position:relative; position: absolute; right:0px; top:7px; }
+.ban_zhuanrang { padding: 20px; }
+.ban_zhuanrang img { width: 985px; }
+
+/*班汇宝*/
+/*.ban_bhb { background-color:#f8f8f8}*/
+.ban_bhb_ul { margin-right:-40px; padding:0px 0 20px 0}
+.ban_bhb_li { width:491px; margin-right:39px; display:inline-block; background-color:#f8f8f8; overflow:hidden}
+.ban_bhb_head { position: relative; background-color:#e1e1e1; overflow:hidden; line-height:38px; padding:0px 15px}
+.ban_bao_id_font { position: absolute; top: 22px; left: 58px; color: #999; font-size: 12px}
+.ban_bhb_b { float:right; display:inline-block; margin:10px 0 0 0; line-height:30px; height:30px;}
+.ban_bhb_time { float:right; margin-right:20px; margin-top: 5px}
+.ban_bhb_status { font-size:12px; padding:0 5px; float:left; line-height:22px; height:22px; border-radius:5px; margin:15px 10px 0 0; }
+.ban_bhb_t { float: left; margin: 0; padding: 0 0 12px; font-weight: normal; font-size:22px }
+.ban_bhb_head_info { border-top:1px solid #d8d8d8; clear:both; overflow:hidden; line-height: normal; padding:5px 0}
+.ban_bhb_head_goal { float:left;}
+.ban_bhb_head_term { float:right;}
+.ban_bhb_head_info_s { font-size:18px; font-size:1.125rem; margin:0 3px 0 8px}
+.ban_bhb_fore,.ban_bhb_hind { float:left; width:50%; margin:15px 0}
+.ban_bhb_fore { border-right:1px solid #d8d8d8;}
+.ban_bhb_hind { margin-right:-6px; margin-left:5px;}
+.ban_bhb_target { margin-left:15px; margin-bottom:5px;}
+.ban_bhb_target_t { margin-right:5px; font-size:14px}
+.ban_bhb_target_t:after { content: "：";}
+.ban_bhb_target_return { font-size:32px; color:#d9272e; margin-right:5px; margin-top:-5px; display:inline-block}
+.ban_bhb_target_sum {font-size:24px; color:#d9272e; margin-right:5px}
+.ban_jianju_margin { margin-bottom: 40px}
+
+.ban_bhb_ad_text { padding-top:100px;}
+.ban_bhb_ad_t { font-size:34px; font-size:2.125rem; margin:0 0 10px 0}
+.ban_bhb_ad2_t { font-size:16px; font-size:1rem; color:#aaa; margin-left:20px; position:relative; top:3px;}
+.ban_bhb_ad2_t:before {content: "["; margin-right:5px;}
+.ban_bhb_ad2_t:after {content: "]"; margin-left:5px;}
+.ban_bhb_ad_c { font-size:20px; font-size:1.25rem; line-height:1.5em;}
+.ban_bhb_ad1,.ban_bhb_ad2,.ban_bhb_ad3,.ban_bhb_ad4,.ban_bhb_ad5,.ban_bhb_ad6 { height:400px; background-repeat: no-repeat; background-position: center center; }
+.ban_bhb_ad1 { text-align: right; background-image: url(../images/ban_bhb_ad1.png);}
+.ban_bhb_ad2 { background-image: url(../images/ban_bhb_ad2.png);}
+.ban_bhb_ad3 { text-align:right; background-image: url(../images/ban_bhb_ad3.png);}
+.ban_bhb_ad4 { background-image: url(../images/ban_bhb_ad4.png);}
+.ban_bhb_ad5 { text-align:right; background-image: url(../images/ban_bhb_ad5.png);}
+.ban_bhb_ad6 { background-image: url(../images/ban_bhb_ad6.png); background-position: center bottom; }
+.ban_bhb_ad1_c { font-size:14px; font-size:1rem; position:relative; float:right; margin:20px 25px 0 0 ; line-height:1.5em}
+.ban_bhb_ad1_c:before { content: "["; position: absolute; font-size: 50px; top: 7px; left: -25px; color: #ccc; font-weight: bold; }
+.ban_bhb_ad1_c:after {content: "]"; position:absolute; font-size:50px; top:7px; right:-25px; color:#ccc; font-weight: bold;}
+.ban_bhb_ad2_c { font-size:24px; font-size:1.5rem; color:#d9272e; margin-right:10px;}
+
+
+
+
+.ban_bhb .ban_detailed_info { margin-right:0px;}
+.ban_bhb .ban_detailed_key_due_c { color:#d9272e}
+.ban_bhb .ban_detailed_key_lucre_c,.ban_bhb .ban_detailed_key_sum_c { font-size:16px; font-size:1.125rem; color:inherit}
+.ban_bhb .ban_detailed_head_title_s { display:block}
+
+.ban_repayflow { margin-top:30px; margin-bottom:20px}
+.ban_repayflow:after { content:""; display:block;clear:both;zoom:1; }
+.ban_repayflow_step { font-size:24px; font-size:1.5rem; border:3px solid #d9272e; color:#d9272e; background-color:#f8f8f8; height:30px; width:30px; border-radius:30px; line-height:30px; text-align:center; margin-top:-20px; position:absolute; overflow:hidden; z-index:3;-webkit-transition: all .5s ease;-moz-transition: all .5s ease;-o-transition: all .5s ease;-ms-transition: all .5s ease;transition: all .5s ease; }
+.ban_repayflow_act:hover .ban_repayflow_step{-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-o-transform:rotateY(360deg);-ms-transform:rotateY(360deg);transform:rotateY(360deg);}
+.ban_repayflow_act_t { margin:0; padding:30px 0 5px 0}
+.ban_repayflow_act_explain { line-height:2em;}
+.ban_repayflow_act_explain_s { font-size:18px; margin-left:5px; color:#d9272e;}
+/*.ban_repay_process:after,.ban_repay_process:before { content:""; display:block; position:absolute; border:3px solid #d9272e; height:25px; width:25px; border-radius:25px;  background-color:#f8f8f8; top:-17px;}
+.ban_repay_process:after { left:15px;z-index:2 }
+.ban_repay_process:before {height:20px; width:20px; border-radius:20px; top:-15px; left:29px;z-index:1 }
+*/
+.ban_repayflow_act { float:left; border-top:3px solid #d9272e; padding: 0 14px 0 8px; position:relative;}
+.ban_repay_process { position: relative; border-top:3px solid #07b670; padding: 0 10px 0 20px; }
+.ban_repay_process .ban_repayflow_step { border:3px solid #07b670; color: #07b670}
+.ban_guize_detail { padding-left: 20px; font-size: 14px}
+.ban_chakan_hong_detail,.ban_guize_detail_a { text-decoration: underline; color: #66d3d8;}
+.ban_chakan_hong_detail:hover,.ban_guize_detail_a:hover { text-decoration: none; color: #d9272e}
+.ban_chakan_hong_detail { position: absolute; top: 30px; left: 130px; }
+
+.ban_twin_buy { margin-right:-40px; overflow:hidden; padding-bottom:20px;}
+.ban_twin_buy_li {width: 507px;margin-right: 11px; float:left}
+.ban_twin_buy_head { background-color:#eaeaea; padding:5px 10px}
+.ban_twin_buy_head_t { font-size:18px; font-size:1.125rem;}
+.ban_twin_buy_head_c { font-size:30px; font-size:1.875rem; margin:0 5px 0 10px;}
+.ban_twin_buy_head_u { font-size:18px; font-size:1.125rem;}
+.ban_twin_buy_head_link { float:right; font-size:14px; text-decoration: none; color:#999; margin-top:10px;}
+.ban_twin_buy_c { background-color:#f8f8f8; padding:5px 10px}
+.ban_twin_buy_data { margin-bottom:3px}
+.ban_twin_buy_data_c_major { font-size:36px; margin:0 5px 0 5px}
+.ban_twin_buy_data_c { font-size:26px; margin:0 5px 0 10px}
+.ban_twin_buy_data_t { font-size:16px;}
+.ban_twin_buy .ban_detailed_label { float:right;}
+.ban_twin_buy .ban_detailed_label_a { font-size:14px; padding:7px 10px; margin:0 0 0 6px}
+
+.ban_bhb_buy_fore .ban_strip_rate_c  { background-color:#20ae1e}
+.ban_bhb_buy_hind .ban_strip_rate_c { background-color:#d9272e}
+.ban_bhb_buy_fore .ban_twin_buy_head_c,.ban_bhb_buy_fore .ban_twin_buy_data_c_major,.ban_bhb_buy_fore .ban_twin_buy_data_c  { color:#20ae1e}
+.ban_bhb_buy_hind .ban_twin_buy_head_c,.ban_bhb_buy_hind .ban_twin_buy_data_c_major,.ban_bhb_buy_hind .ban_twin_buy_data_c { color:#d9272e}
+.ban_bhb_buy_fore .ban_detailed_label_a { color:#20ae1e; border-color:#20ae1e}
+.ban_bhb_buy_hind .ban_detailed_label_a { color:#d9272e;border-color:#d9272e}
+
+.ban_twin_buy .ban_detailed_buy_invest { overflow:hidden; margin:10px 0 10px 0}
+.ban_twin_buy .ban_detailed_buy_invest_input { margin:0; width:360px; float:left; height:40px; line-height:40px;}
+.ban_twin_buy .ban_detailed_buy_invest_input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */line-height:40px; }
+.ban_twin_buy .ban_detailed_buy_invest_input::-moz-placeholder { /* Mozilla Firefox 19+ */line-height:40px;}
+.ban_twin_buy .ban_detailed_buy_invest_input:-ms-input-placeholder {line-height:40px;}
+.ban_twin_buy .ban_detailed_buy_invest_input::-webkit-input-placeholder {line-height:40px;}
+.ban_twin_buy_b { float:right; margin:0; height:40px; line-height:40px; font-size:18px}
+
+.ban_ben_xianzhuang { position: relative; top: 20px; background: #fffbd3; color: #d9272e; line-height: 40px; padding: 0 0 0 30px; font-size: 18px}
+.ban_all_sprice_color .ban_detailed_label_a { color:#69A5F6;border-color:#69A5F6 }
+.ban_all_sprice_color .ban_twin_buy_head_c,.ban_all_sprice_color .ban_twin_buy_data_c_major,.ban_all_sprice_color .ban_twin_buy_data_c { color: #69A5F6}
+.ban_all_sprice_color .ban_strip_rate_c { background-color:#69A5F6}
+
+.ban_twin_buy .ban_bao_label_ul { float: none; padding: 10px 0; position: relative; left: -10px}
+.ban_bao_fengbi .ban_twin_buy_c { height: 150px}
+
+/*我要借款*/
+.ban_page_loan1 { margin-left:150px;}
+.ban_page_loan3 { margin-left:150px;}
+.ban_infobox_inbulk_loan3 .ban_infobox_inbulk_label { width:108px; display:inline-block; padding:0 4px 0 0; font-size:16px;}
+.ban_infobox_inbulk_loan3label {}
+.ban_infobox_inbulk_loan3text {border:1px solid #ccc;font-size:20px; font-size:1.25rem; height:30px; line-height:30px; padding:0 8px; border-radius:5px; width:250px; margin:0 -15px 0 0}
+
+/*2015.10.29增加班汇宝详细页表头*/
+.ban_new_titletop_ul:after { content: ""; display: block; clear: both}
+.ban_new_titletop_ul { background: url(../images/ban_baonew_title.jpg) repeat-x; height: 120px; padding: 18px 9px 0; overflow: hidden; line-height: 32px; font-size: 16px}
+.ban_new_title_span,.ban_new_title_span_width { float: left; text-align: right; width: 140px}
+.ban_nt_span_w { float: left; width: 205px; padding-left: 5px}
+.ban_new_title_span_width { width: 165px}
+.ban_nt_span_w_short { width: 135px;}
+.ban_new_titletop_ul i { font-size: 30px; padding: 0 5px; color: #d9272e}
+.ban_new_titletop_ul i.ban_sprice_a { font-size: 24px; color: #20ae1e}
+.ban_new_titletop_ul i.ban_sprice_b { font-size: 24px; color: #d9272e}
+.ban_new_titletop_ul i.ban_sprice_c { color: #69A5F6}
+.ban_price_pre { position: relative; top: -6px}
+.ban_price_pre i { position: relative; top: 1px}
+.ban_price_pre_2 { position: relative; top: -4px}
+.ban_price_pre_2 i { position: relative; top: 1px}
+
+/*文章*/
+.ban_article { overflow:hidden; background-color:#f8f8f8;}
+.ban_article_ul {}
+.ban_article_li { margin:0px 0px 20px; border-bottom:1px solid #eee; list-style:none outside; }
+.ban_article_li_a { text-decoration: none; display:block; padding:0px 0px 20px; }
+.ban_article_li_a:hover {}
+.ban_article_li_t { color:#d9272e; font-size:18px; font-weight:400; padding:0px; margin:0px;}
+.ban_article_li_time { font-size:12px; color:#ccc; margin-top:5px;}
+.ban_article_li_sum { font-size:14px; margin:5px 0px 0px; color:#666;text-indent:2em}
+
+.ban_article_head {padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #eee; }
+.ban_article_t { color:#d9272e; font-size:24px; font-weight:400; margin:0 0 10px 0;}
+.ban_article_time,.ban_article_sign { display:inline-block; font-size:12px; color:#666; margin-right:20px;}
+/*.ban_article_sign:before {content: " 发布者： ";}*/
+.ban_article_text { font-size:14px; line-height:2em; color:#333; }
+.ban_article_text img { width: 775px;}
+.ban_article_text p { text-indent: 30px; }
+
+/*登录*/
+.ban_login_bg { background-color:#d9272e; height: 410px; margin-bottom:50px;}
+.ban_login_ad { width: 586px; overflow: hidden; height: 410px; display: block; background-size: cover; background-position: center center; color: #f8f8f8; text-decoration: none; }
+.ban_login { background-color:#eee; padding: 50px 50px; width:338px; float:right;}
+.ban_login_id,.ban_login_pw,.ban_login_yzm { margin-bottom:20px;}
+.ban_login_id_l,.ban_login_pw_l { display:none}
+.ban_login_id_in,.ban_login_pw_in,.ban_login_yzm_in { background-color:#f6f6f6; border:1px solid #ccc; padding:0px 10px 0px 60px; font-size:20px; font-size:1.25rem;background-repeat: no-repeat; background-position: left center; border-radius:5px; width:266px; height:45px; line-height:45px;}
+.ban_login_id_in { background-image: url(../images/intext_id.png); }
+.ban_login_id_in:-moz-placeholder { /* Mozilla Firefox 4 to 18 */font-size:16px; font-size:1rem; text-align:left; line-height:45px; }
+.ban_login_id_in::-moz-placeholder { /* Mozilla Firefox 19+ */font-size:16px; font-size:1rem; text-align:left;line-height:45px;}
+.ban_login_id_in:-ms-input-placeholder {font-size:16px; font-size:1rem; text-align:left;line-height:45px;}
+.ban_login_id_in::-webkit-input-placeholder {font-size:16px; font-size:1rem; text-align:left;line-height:45px;}
+.ban_login_pw_in { background-image: url(../images/intext_pw.png); }
+.ban_login_b { background-color: #d9272e; color:#f8f8f8; font-size:20px; font-size:1.25rem; border:none; width:338px; padding:10px 0; border-radius:5px; cursor:pointer;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+.ban_login_b:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset;  }
+.ban_login_info,.ban_login_info_warning { padding:5px; margin-bottom:20px; font-size:20px; text-align:center;}
+.ban_login_info_warning {background-color: #fffbd3;  color: #d9272e; display:block;}
+.ban_login_tool { margin-top:10px;}
+.ban_login_tool_plainpw { float:right;}
+.ban_login_tool_checkbox { vertical-align:middle; margin-right:5px; background-color:#f6f6f6; width: 15px; height: 15px}
+.ban_login_tool_label {vertical-align:middle; cursor:pointer; color:#666}
+.ban_login_tool_forget { float: left; display:inline-block; padding:5px 10px;  text-decoration: none; border-radius:5px; color: #666; border:1px solid #ccc;text-decoration: none; }
+.ban_login_tool_forget:hover { border:1px solid #666; }
+.ban_login_reg { border-top:1px solid #ccc; margin-top:10px; padding-top:10px; text-align:right}
+.ban_login_reg_t { padding-right:20px; color:#666}
+.ban_login_reg_b { background-color:#20ad1e; display:inline-block; padding:5px 10px; color:#f8f8f8; text-decoration: none; border-radius:5px; }
+.ban_login_reg_b:hover {box-shadow:0px 500px 0px rgba(255,255,255,0.2) inset; }
+.ban_login_yzm_in { width: 155px; background-image: url(../images/intext_yzm.png); }
+.ban_login_yzm { float: left; height: 45px}
+.ban_login_yzm .ban_login_yzm_in { float: left; }
+.ban_login_yzm_img { float: left; width: 100px; height: 45px; margin-left: 5px; border-radius:5px;}
+.ban_login_yzm_img img { width: 100px; height: 45px; }
+.ban_login_add_yzm,.ban_login_add_yzm .ban_login_ad { height: 470px;}
+.ban_login_add_yzm { background: #eee; position: relative; }
+.ban_login_bottom { position: absolute; bottom: 40px; width: 338px; }
+
+/*注册*/
+.ban_reg_verify { width:100%; height:38px; border-radius:5px; border:1px solid #ccc;}
+.ban_page_reg1 { width:920px; margin:auto}
+.ban_page_reg2 { width:800px; margin:auto}
+.ban_page_regjg { padding-left:120px;}
+.ban_page_regok {}
+
+/*支付确认*/
+.ban_order_table { display:table; width:100%; border-top:1px solid #ccc;  margin-bottom:0px;}
+.ban_order_target { display:table-cell; vertical-align:middle; text-align:left; padding:10px 20px; background-color:#eee}
+.ban_order_target_t { display:inline-block; width:70px; text-align:right}
+.ban_order_target_t:after { content:"："; }
+.ban_order_target_c { margin:0 5px 0 10px; font-size:16px;}
+.ban_order_target_u {}
+.ban_order_target_b { font-size:12px; height:25px; line-height:25px; display:inline-block; margin:0}
+
+.ban_confirm_sum { backgro und-color:#eaeaea; padding:30px 0 20px 0; margin:0px 20px; border-bottom:1px solid #eaeaea}
+.ban_confirm_sum_li { display:inline-block; margin-right:100px}
+.ban_confirm_sum_pay,.ban_confirm_sum_pay_u,.ban_confirm_sum_remainder,.ban_confirm_sum_remainder_c,.ban_confirm_sum_remainder_u { font-size:16px;}
+.ban_confirm_sum_pay_c { font-size:40px; color:#d9272e; margin:0 10px 0 20px}
+.ban_confirm_sum_remainder_c { font-size:18px;  margin:0 10px 0 20px}
+.ban_confirm_sum_pay_c_decimal { font-size:24px}
+.ban_confirm_order { padding:20px 20px 40px 20px;}
+.ban_confirm_order_info { padding:10px 0 15px 0; font-size:16px;}
+.ban_confirm_order_pw { width:300px; vertical-align:middle; height:50px; line-height:50px; margin-right:5px}
+.ban_confirm_order_b { height:50px; font-size:18px; vertical-align:middle; margin:0}
+.ban_confirm_deal { background-color:#eee; border-bottom:1px solid #ccc; border-top:0px solid #ccc; padding:5px 20px 10px 20px; color:#999}
+.ban_confirm_deal_t {  font-size:14px; }
+.ban_confirm_deal_c {padding-right:60px; }
+.ban_confirm_deal_t:after { content:"："; }
+.ban_confirm_deal a { text-decoration: none; color:#999 }
+
+
+
+
+
+
+/*垂直流程*/
+
+.ban_vertical_step { margin:40px 0px 0 20px}
+.ban_vertical_step_ul {}
+.ban_vertical_step_li {border-left: 5px solid #d9272e;}
+.ban_vertical_step_name { margin-top:7px; margin-left:-27px;}
+.ban_vertical_step_num { display:inline-block; vertical-align:middle; font-size:24px; font-size:1.5rem;border: 5px solid #d9272e; background-color:#f8f8f8; height:40px; width:40px; border-radius:40px; line-height:40px; text-align: center; z-index:2; position:absolute; margin-top:-8px; color:#d9272e}
+.ban_vertical_step_t { display: inline-block; vertical-align: middle; margin: 0 0 0 30px; padding: 5px 15px 5px 30px; border-radius: 5px; color: #f8f8f8; background-color: #d9272e; font-size: 18px; font-size:1.125rem; font-weight: normal;}
+.ban_vertical_step_explain { padding:10px 0px 40px 40px; line-height:1.5em;}
+.ban_vertical_step_explain_s { color:#d9272e}
+.ban_vertical_step_tool { display:inline-block; vertical-align:middle; margin-left:10px}
+.ban_vertical_step_b { height:36px; line-height:36px; margin:0 10px 0 0}
+
+.ban_vertical_step_pass  { border-left: 5px solid #efb9bb}
+.ban_vertical_step_pass .ban_vertical_step_num { color:#efb9bb; border-color:#efb9bb}
+.ban_vertical_step_pass .ban_vertical_step_t { background-color:#efb9bb}
+.ban_vertical_step_pass .ban_vertical_step_t:before { content: "已完成"; display:inline-block; margin-right:15px }
+.ban_vertical_step_pass .ban_vertical_step_tool {}
+.ban_vertical_step_pass .ban_vertical_step_explain { opacity:.3}
+.ban_vertical_step_end {border-left: 5px solid transparent;}
+
+
+
+/*个人账户*/
+.ban_minitab { margin-top:0px; margin-right:-10px}
+.ban_minitab_li { display:inline-block; margin-right:10px}
+.ban_minitab_a,.ban_minitab_a_current { text-decoration: none; color:#999; display:block; padding:6px 12px; font-size:14px; font-size:0.875rem; margin-bottom:10px; border-radius:5px; background-color:#f3f3f3; width:auto;white-space: nowrap; }
+.ban_minitab_a_current { background-color:#d9272e; color:#f8f8f8;padding:5px 12px; font-size:16px;}
+.ban_minitab_customtime_switch {}
+.ban_minitab_customtime_switch:hover { }
+.ban_minitab_customtime { display: inline-block; vertical-align:middle; overflow:hidden;  width:0px;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;white-space: nowrap; }
+.ban_minitab_customtime_switch:hover .ban_minitab_customtime { width:245px; margin-right:-5px}
+.ban_minitab_customtime_in { display:inline-block; padding:1px; background-color:#f8f8f8; margin:-1px 2px; font-size:14px; border-radius:3px; color:#bbb; cursor:pointer}
+.ban_minitab_customtime:before { content:"："; }
+.ban_minitab_num:before { content:"（"; margin-left:5px; }
+.ban_minitab_num:after { content:"）"; }
+
+.ban_filter { margin:20px 0 10px 0}
+
+.ban_capital_in { color:#d9272e}
+.ban_capital_in:before { content:"+";}
+.ban_capital_out { color:#20ad1e}
+/*.ban_capital_out:before { content:"-";}*/
+
+.ban_account { overflow:hidden}
+.ban_account .ban_page_title { border-bottom:1px solid #eaeaea; padding:20px 0 10px 0; margin-bottom:0px;}
+.ban_account_sidebar { float:left;width:200px; background-color:#eaeaea; height:100%; padding-bottom:20px; }
+.ban_account_sidebar_ul { margin:0px}
+.ban_account_sidebar_t { margin: 10px 0px 0px 0; padding:20px 20px 5px; 20px; font-size: 18px; font-weight: normal; border-top:1px solid #f8f8f8; cursor:default }
+.ban_account_sidebar_ul2 { margin: 0;}
+ban_account_sidebar_li2 {}
+.ban_account_sidebar_a,.ban_account_sidebar_a_current { color: #8d8d8d; display: block; padding-left:40px; text-decoration: none; font-size:14px; line-height:40px; position:relative }
+.ban_account_sidebar_a:hover { background-color:#999; color:#f8f8f8; padding-left:30px;}
+.ban_account_sidebar_a_current { background-color:#d9272e; color:#f8f8f8; padding-left:30px; font-size:16px; box-shadow:0px 1px 3px #666}
+.ban_account_sidebar_a_current:after { content:""; display:block; float:right; box-sizing:border-box; width:44px; line-height:44px; border-right:22px solid #f8f8f8;border-top:22px solid transparent;border-bottom:22px solid transparent;border-left:22px solid transparent; margin-right:-3px; margin-top:-2px;}
+.ban_account_content { background-color:#f8f8f8; margin-left:200px; padding:0 0 50px 0; min-height:600px;}
+.ban_account_content_w { margin:0 30px;}
+.ban_account_sidebar .ban_account_msg {top:50%; left:13px; margin-top:-6px}
+
+.ban_as_user { padding:20px 20px 5px 20px;}
+.ban_as_username {}
+.ban_as_usergreet {}
+.ban_as_username_text { font-size:18px; margin-left:10px}
+.ban_as_userstate {}
+.ban_as_userstate_ul { text-align:center; margin:10px 0 5px 0;}
+.ban_as_userstate_li { display:inline-block; width:40px; height:40px; border-radius:40px; line-height:40px; background-color:#d9d9d9; margin:0 5px; vertical-align:middle; position:relative}
+.ban_as_userstate_li:hover .ban_as_userstate_icon { opacity:1}
+.ban_as_userstate_icon { height:30px; margin-top:5px; display:inline; border:none; opacity:.6;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+.ban_as_userstate_none { background-color:#e3e3e3}
+.ban_as_userstate_none .ban_as_userstate_icon { opacity:.4}
+.ban_as_userstate_none:hover .ban_as_userstate_explain { display:block; z-index:9;}
+.ban_as_userstate_explain { display:none; position:absolute; line-height:1.3em; border-radius:5px; text-align:left; width:150px; top:50px; opacity:.9; background-color:#f8f8f8; padding:5px 10px; border:1px solid #ccc; box-shadow:2px 2px 2px #ccc}
+.ban_as_userstate_explain:before,.ban_as_userstate_explain:after { content:""; display:block; position:absolute;  box-sizing:border-box; width:7px; height:7px; border-top:7px solid transparent; border-left:7px solid transparent; border-right:7px solid transparent; border-bottom:7px solid #ccc;top:-14px; left:10px;}
+.ban_as_userstate_explain:after {border-bottom:7px solid #f8f8f8;top:-13px; left:10px;}
+
+
+
+.ban_timeline { height:500px; overflow:auto; margin:20px 0; border-top:0px solid #f3f3f3}
+.ban_timeline_ul { margin:0 0 0 220px; padding:60px 30px 20px 30px; border-left:5px solid #d9272e}
+.ban_timeline_li { position:relative; margin:0 0 40px 0; font-size:16px}
+.ban_timeline_li:after { content:""; display:block; clear:both}
+.ban_timeline_time { position:absolute; left:-180px; width:150px; padding:5px 0 0 0 }
+.ban_aboutweb_name { left:-150px; width: 100px; padding-right: 20px; line-height: 24px; text-align: center; }
+.ban_timeline_time:after { content:""; display:block; position:absolute; height:11px; width:11px; border-radius:11px;border:5px solid #d9272e; right:-8px; top:5px; background-color:#f8f8f8 }
+.ban_timeline_time_current:after { border:5px solid #d9272e; right:-8px; top:5px; background-color:#53f851 }
+.ban_timeline_event { padding: 5px 15px; margin: 0 0 10px 0; background-color: #eee; display: block; float:left; clear:both; text-decoration: none; color:#666}
+.ban_timeline_event:hover { padding: 5px 15px; margin: 0 0 10px 10px;}
+.ban_timeline_event_t1 { vertical-align:middle; color:#666}
+.ban_timeline_event_t2 { font-size:12px; height:20px; line-height:20px; padding:0 5px; margin:0 10px 0 -25px; vertical-align:middle}
+/*.ban_timeline_event_t2:after { content:"]";}
+.ban_timeline_event_t2:before { content:"[";}*/
+.ban_timeline_event_ts { vertical-align:middle; font-size:18px; margin:0 5px 0 10px; color:#d9272e}
+.ban_timeline_event_t3 { vertical-align:middle}
+
+.ban_single_input { border-bottom:0px solid #eaeaea; padding:30px 0;}
+.ban_single_input_t { display:inline-block; vertical-align:middle; font-size:20px; margin-right:20px;}
+.ban_single_input_u_c { position:relative; display:inline-block}
+.ban_single_input_c { display:inline-block; vertical-align:middle; width:236px; height:50px; text-align:right; font-size:30px;}
+.ban_single_input_u_c .ban_single_input_c { padding-right:45px;}
+.ban_single_input_u { display:inline-block; vertical-align:middle; position:absolute;font-size: 18px; right:0px; top:8px; border-left:1px solid #eaeaea; padding:5px 8px }
+.ban_single_input_b { display:inline-block; vertical-align:middle;font-size: 18px; line-height:50px; height:50px; margin:0}
+.ban_numfont { color: #999; font-size: 28px}
+.ban_currentmoney { padding:20px 0 0 0}
+.ban_data_t { font-size:18px; margin-right:20px;}
+.ban_data_u { font-size:18px}
+.ban_data_c { margin:0 5px 0 0}
+.ban_data_c_s { font-size:36px; color:#d9272e}
+.ban_data_c_decimal { font-size:.7em;}
+.ban_data_cue { margin-left:20px;}
+.ban_huibao_input .ban_single_input_u { top: 4px}
+.ban_data_cue_div { padding: 5px 10px; font-size:18px; margin: 10px 0 50px 0}
+.ban_data_cue_padding { padding: 20px 30px}
+.ban_data_cue_padding span { display: block; padding-left: 33px}
+.ban_data_cue_padding strong { font-size: 18px}
+.ban_info_cue {background-color: #fffbd3;  color: #d9272e;}
+.ban_account_content_cue { padding:12px 20px 13px 20px; font-size:16px; font-size:1rem;}
+/*-银行卡-*/
+/*.ban_bankcard_box { height: 280px}*/
+.ban_bankcard_box { float: left; width: 775px}
+.ban_bankcard_imgbox { float: left; width: 340px; height: 214px; border: 1px solid #ececec; border-radius: 10px; background-color: #fff; margin: 20px 0 40px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .2); -moz-box-shadow:0 0 10px rgba(0, 0, 0, .2); box-shadow:0 0 10px rgba(0, 0, 0, .2);}
+.ban_bankcard_class { margin: 30px 20px 20px}
+.ban_bankcard_class span { position: relative; top: -10px; left: 6px; border-radius: 5px; background-color: #009695; color: #fff; padding: 0 5px}
+.ban_bankcard_class img { width: 130px; height: 28px}
+.ban_bankcard_num { padding: 10px 10px 10px 25px; background-color: #00bac9; color: #fff;}
+.ban_bankcard_num span { display: inline-block; padding-right: 12px; font-size: 24px; font-family: "Times New Roman", Times, serif; font-weight: bold; text-shadow: 2px 2px #518d92}
+.ban_bankcard_name { padding: 15px 0 0 30px}
+.ban_bankcard_name span { display: block; line-height: 24px}
+.ban_bankcard_name em { color: #d9272e}
+
+.ban_bankcard_fontp { float: left; width: 380px; margin: 35px 0 0 30px; font-size: 16px}
+.ban_bankcard_fontp p { margin: 0; padding: 0 0 4px}
+.ban_bankcard_fontp p:after { display: block; clear: both; content: ""}
+.ban_bankcard_fontp p em { display: block; margin-top: 15px; color: #d9272e}
+.ban_bankcard_fontp p i { float: left; width: 120px}
+.ban_bankcard_fontp p dfn { float: left; width: 240px}
+
+.ban_table { display:table; width:100%; border-collapse:collapse; border-bottom:1px solid #eaeaea}
+.ban_table_tr { display:table-row}
+.ban_table_td,.ban_table_th { display:table-cell; text-align:center; padding:10px 0; border-bottom:0px solid #eaeaea}
+.ban_table_td { background-color:#fafafa; vertical-align:middle}
+.ban_table_tr:nth-child(odd) .ban_table_td{background:#f6f6f6;}
+.ban_table_tr:hover .ban_table_td { background-color:#fff;}
+.ban_table_th { background-color:#eaeaea; font-weight: bold; }
+.ban_table_bottom { overflow:hidden; margin-top:10px}
+.ban_table_page { float:right;}
+.ban_table_b { height:30px; line-height:30px;}
+.ban_table_sum { float:left}
+.ban_table_sum_t,.ban_table_sum_u { font-size:16px;}
+.ban_table_sum_c { margin: 0 5px 0 10px; font-size:24px;  color:#d9272e}
+.ban_table_sum_t:after { content:"："}
+.ban_table_project { text-decoration: none; color:#666; vertical-align:middle }
+.ban_table_project:hover { text-decoration: underline;  color: #d9272e; }
+.ban_table_money {text-align:right; width:120px;}
+.ban_table_money:after { content:""; display:inline-block; width:20px;}
+.ban_table_due{text-align:right; width:90px; }
+.ban_table_due:after { content:""; display:inline-block; width:25px;}
+.ban_table_lucre {text-align:right; width:100px; }
+.ban_table_lucre:after { content:""; display:inline-block; width:20px;}
+.ban_xieyi_font { display: block; color: #0099ff; text-decoration: none; font-size: 12px; text-align: center}
+.ban_xieyi_font:hover { color: #d9272e}
+.ban_table_icon { font-size:14px; font-size:0.875rem; width:18px; line-height:18px; height:18px; margin:0 5px 0 0 ; vertical-align:middle; position:relative; top:1px;}
+
+.ban_table_choose { width:20px;}
+.ban_table_money2w { width:280px; padding:0 10px;}
+.ban_table_money2 {}
+.ban_table_money2_t {}
+.ban_table_money2_c { margin-right:5px; margin-left:10px; width:100px; display:inline-block; text-align:right}
+.ban_table_money2_u {}
+.ban_table_pass .ban_table_td { color:#ccc;}
+.ban_table_pass .ban_table_money2_c {text-decoration:line-through}
+
+
+
+.ban_withdrawcard_bank,.ban_withdrawcard_num { display:inline-block; vertical-align:middle; font-size:16px; height:25px; line-height:25px;}
+.ban_withdrawcard_bank { margin-right:30px}
+.ban_withdrawcard_num span { padding-right: 10px}
+.ban_page_accountinfo .ban_infobox_label { width:135px}
+
+/*个人-概况*/
+.ban_databig {padding:20px 0 10px 0; display:inline-block; }
+.ban_databig_t {font-size:24px; margin-right:20px;}
+.ban_databig_c {color: #d9272e; font-size:38px}
+.ban_data_c_decimal { font-size:.7em}
+.ban_databig_u {font-size:18px; margin-left:5px;}
+
+
+.ban_account_overview_top { border-bottom:1px solid #eaeaea; padding-bottom:10px}
+.ban_account_overview_top .ban_databig { width: 415px;}
+.ban_account_overview_top .ban_databig_t { font-size:18px}
+.ban_account_overview_top .ban_account_overview_topr { border-left:1px solid #eaeaea; padding-left:20px;width:310px;}
+.ban_account_overview_topr .ban_databig_c {color:#525252; font-size:28px; margin-top:10px;}
+
+.ban_account_overview_total { position:relative; margin-top:30px; height:240px; border-bottom:1px solid #eaeaea; margin-bottom:20px}
+.ban_account_overview_total .ban_databig { display:block; border-bottom:1px solid #eaeaea; padding:10px; margin-bottom:3px;}
+
+.ban_account_overview_asset { background-color:#d9272e; position:absolute; left:0; top:0px; height:200px; width:200px; border-radius:200px; overflow:hidden; border:3px solid #eaeaea}
+.ban_account_overview_total_graph1 { background-color:#66d4d9;}
+.ban_account_overview_total_graph2 { background-color: #999;}
+
+.ban_account_overview_asset_value { position:absolute;background-color:#fff;background-color:rgba(255,255,255,0.95); border-radius:180px; height:180px; width:180px; margin:10px 0 0 10px; top:0px; text-align:center;}
+.ban_account_overview_asset_value .ban_databig { border:none; margin:40px 0 0 0; padding:0}
+.ban_account_overview_asset_value .ban_databig_t { display:block; margin:0;}
+.ban_account_overview_asset_value .ban_databig_c { display:block; font-size:24px; margin:10px 0;}
+.ban_account_overview_asset_value .ban_databig_u {  display:block; margin:0}
+
+.ban_account_overview_total_detail { margin-left:250px; padding-top:20px;}
+.ban_account_overview_total_detail .ban_databig_t { width:110px; display:inline-block; font-size:18px; vertical-align:middle;}
+.ban_account_overview_total_detail .ban_databig_u { font-size:18px; vertical-align:middle;}
+.ban_account_overview_total_detail .ban_databig_c { font-size:24px; display:inline-block; min-width:180px; text-align:right; vertical-align:middle;}
+.ban_account_overview_total_detail1:before { content:""; display: inline-block; vertical-align:middle; width:20px; height:20px; margin-right:20px; background-color:#66d4d9}
+.ban_account_overview_total_detail2:before { content:""; display: inline-block; vertical-align:middle; width:20px; height:20px; margin-right:20px; background-color:#999}
+.ban_account_overview_total_detail3:before { content:""; display: inline-block; vertical-align:middle; width:20px; height:20px; margin-right:20px; background-color:#d9272e}
+.ban_account_overview_total_detail1 .ban_databig_c { color:#66d4d9}
+.ban_account_overview_total_detail2 .ban_databig_c { color:#999}
+.ban_account_overview_total_detail_b { margin:0 0 0 20px; vertical-align:middle;/* height:24px; line-height:24px;*/ position:absolute; margin-top:-5px; width:60px;}
+.ban_account_overview_expect .ban_databig_c { color:#525252; font-size:24px;}
+.ban_account_overview_expect .ban_timeline { max-height:500px;}
+.ban_account_overview_text { color:#999;}
+
+
+
+/*个人-资金明细*/
+.ban_table_capitaldetail02 {text-align:left; width:220px; padding-left:10px }
+
+/*个人-项目明细*/
+.ban_table_buttonset { cursor:pointer; position:relative; margin:auto; border-top:3px solid #999; border-bottom:3px solid #999; padding:3px 0; width:20px}
+.ban_table_buttonset:after { content:""; display:block; background-color:#999; height:3px;}
+.ban_table_buttonset:hover { border-top:3px solid #d9272e; border-bottom:3px solid #d9272e;}
+.ban_table_buttonset:hover:after { content:""; display:block; background-color:#d9272e; height:3px;}
+.ban_table_buttonset_ul {  position:absolute; right:0; top:0px; border:1px solid #eee; z-index:9; opacity:.1;box-shadow:3px 3px 3px #999;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; overflow:hidden; width:0; height:0px}
+.ban_table_buttonset:hover .ban_table_buttonset_ul { display:block; opacity:.95; width:auto; height:auto}
+.ban_table_buttonset_li { border-bottom:1px solid #eee;}
+.ban_table_buttonset_b:hover { background-color:#eee; border-left:5px solid #d9272e; margin-right:-5px; padding-right:0px; padding-left:5px; color:#666 }
+.ban_table_buttonset_b,.ban_table_buttonset_b_disable:hover { display: block; width: 90px; padding: 5px 0; text-decoration: none; background-color:#f8f8f8; border-left:5px solid #f8f8f8; padding-right:5px; color:#999 }
+.ban_table_buttonset_b_disable,.ban_table_buttonset_b_disable:hover { color:#ccc; cursor:default;text-decoration:line-through;}
+.ban_table_buttonset_b_disable:hover {color:#e0e0e0;}
+.ban_page_title_icon { font-size:26px; height:40px; line-height:40px; width:40px; margin-right:15px}
+
+.ban_account_timeline { margin:0;  height:600px; border:none}
+.ban_timeline_event_pic { padding-top:15px;}
+.ban_timeline_event_pic:hover { padding-top:15px;}
+
+.ban_evolve_img { border:none}
+.ban_evolve_img_explain { margin-bottom:20px; background-color:#eee; padding:10px 0}
+.ban_evolve_img,.ban_evolve_img_explain { width:450px;}
+
+.ban_detail_width .ban_evolve_img,.ban_detail_width .ban_evolve_img_explain { width: 680px; }
+.ban_detail_width .ban_evolve_img { margin-bottom: 15px; }
+
+.ban_detail_tablebox,.ban_danbao_table { width: 95%; }
+.ban_detail_tablebox tr th,.ban_detail_tablebox tr td { padding: 8px; margin-top: 5px; }
+.ban_detail_tablebox tr th { background: #f6f6f6; width: 140px; padding-right: 10px; }
+.ban_detail_tablebox tr td { background: #fafafa; }
+.ban_danbao_table { margin-top: 20px; }
+.ban_danbao_table tr th,.ban_danbao_table tr td { padding: 10px; }
+.ban_danbao_table tr th { background: #eaeaea; }
+.ban_danbao_table tr td { border-bottom: 1px solid #eee; text-align: center; }
+.ban_danbao_table tr td table { width: 100%; padding: 20px 10px; margin: 0; background: #f6f6f6; line-height: 24px; }
+.ban_danbao_table tr td table tr td { padding: 0 20px; margin: 0; border: none; text-align: left; }
+.ban_jiekuan_bei { padding: 20px 40px; line-height: 30px; font-size: 16px }
+.ban_jiekuan_border { border: 1px solid #e3e3e3; }
+.ban_touzi_liuimg { text-align: center; }
+.ban_jiekuan_border tr td table tr td { padding-bottom: 20px; }
+
+/*项目评级*/
+.ban_pro_top { padding: 0 30px; font-weight: bold; border-bottom: 1px solid #d5d5d5; }
+.ban_pro_top span { font-size: 70px; padding-right: 5px; color: #d24545; vertical-align: middle; }
+.ban_project_score { float: right; background: url(../images/ban_dkh_03.png) no-repeat left; padding: 40px 120px 40px 80px; margin-top: 50px; font-size: 16px; line-height: 36px; }
+.ban_project_score span { color: #339933; font-size: 20px; padding: 0 5px 0 10px; }
+.ban_pro_supply { clear: both; padding: 40px 30px 0; line-height: 28px; font-size: 14px; }
+
+
+/*个人-数据项*/
+.ban_account_data_set { padding-top:20px;}
+.ban_account_data { display:inline-block; width:249px; margin-bottom:10px; border:0px solid #0F6}
+.ban_account_data_t { display:inline-block; width:100px; text-align:right }
+.ban_account_data_t:after { content:"：";}
+.ban_account_data_c { display:inline-block; font-size:16px;margin:2px 5px 0 10px; }
+.ban_account_data_u { display:inline-block; }
+.ban_account_data_c_s {  color: #d9272e; font-size:18px; margin: 0 5px}
+
+
+
+/*转让申请*/
+.ban_attorn_apply {padding-left:30px}
+.ban_attorn_apply .ban_infobox_inputbox { width:220px;}
+.ban_attorn_apply2 { text-align:center; padding-left:90px}
+.ban_attorn_batchapply { margin-top:10px;padding-left:30px}
+.ban_attorn_batchapply .ban_infobox_inputbox { width:220px;}
+
+/*借款申请*/
+.ban_page_loanapply { height:500px; background-color:#f8f8f8}
+.ban_loanapply_poster { position:absolute; top:30px; right:30px}
+.ban_loanapply_poster:after { content:""; display:block;overflow:hidden; position:absolute; top:320px; right:0px; width:30px; height:30px; background-color:#cac2b8; border-radius:30px;}
+.ban_loanapply_poster_in1,.ban_loanapply_poster_in2,.ban_loanapply_poster_in3 { color:#f8f8f8; text-align:center; overflow:hidden; position:absolute; -webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; cursor: default}
+.ban_loanapply_poster_in1 { display: block; text-decoration: none; width:260px; height:260px; border-radius:260px;  background-color:#da6969; top:20px; right:150px;border:5px solid #f8f8f8; box-shadow:0 0 15px rgba(0,0,0,0.3); z-index:3; cursor:pointer}
+.ban_loanapply_poster_in1:hover { margin-top:-40px; margin-left:-40px;box-shadow:10px 10px 20px  rgba(0,0,0,0.1); width:300px; height:300px;}
+.ban_loanapply_poster_in1:hover .ban_loanapply_poster_in1_c { line-height:2em}
+.ban_loanapply_poster_in1_t { background-color:#c76060; font-size:32px; height:90px; line-height:90px;}
+.ban_loanapply_poster_in1_c { font-size:22px; padding-top:20px;-webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease; line-height:1.5em}
+.ban_loanapply_poster_in2 { width:180px; height:180px; border-radius:180px; background-color:#a4b2c9; top:130px; right:0px;-webkit-transform:rotate(10deg);-moz-transform:rotate(10deg);-o-transform:rotate(10deg);-ms-transform:rotate(10deg);transform:rotate(10deg);}
+.ban_loanapply_poster_in2:hover { opacity:.3; height:60px; width:60px;}
+.ban_loanapply_poster_in2_t { background-color:#9ba8bd; height:70px; line-height:70px; font-size:24px;}
+.ban_loanapply_poster_in2_c { padding-top:15px; font-size:16px}
+.ban_loanapply_poster_in3 { width:160px; height:160px; border-radius:160px; background-color:#cac2b8; top:250px; left:-550px;-webkit-transform:rotate(-20deg);-moz-transform:rotate(-20deg);-o-transform:rotate(-20deg);-ms-transform:rotate(-20deg);transform:rotate(-20deg); opacity:1}
+.ban_loanapply_poster_in3:hover { opacity:.3; height:60px; width:60px;}
+.ban_loanapply_poster_in3_t { background-color:#c0b9af; font-size:18px; height:60px; line-height:60px}
+.ban_loanapply_poster_in3_c { font-size:14px; padding-top:10px;}
+.ban_page_loanapply_c { padding-top:80px;}
+.ban_page_loanapply_c1 { font-size:26px; color:#999}
+.ban_page_loanapply_c2 { font-size:46px; margin-bottom:10px;}
+.ban_page_loanapply_c3 { font-size:16px; margin-bottom:20px;}
+.ban_page_loanapply_c4 { margin-left:10px; font-size:32px;font-family: Georgia, "Times New Roman", Times, serif; color:#d24545}
+
+/*--2015.8.26 我要借款--*/
+.ban_jiekuan_apply { top: 5px; }
+.ban_jiekuan_apply:after { top: 280px; width: 25px; height: 25px; }
+.ban_jiekuan_apply_c { padding-top: 100px; }
+.ban_jiekuan_login_h { position: absolute; right: 0; bottom: 620px; right: 0; font-size: 16px; }
+.ban_jiekuan_apply_in1 { width:200px; height:200px; border-radius:200px; right: 130px; }
+.ban_jiekuan_apply_in1:hover { margin-top: -20px; margin-left: -20px; width:220px; height: 220px; }
+.ban_jiekuan_apply_in1_t { height:75px; line-height:75px; font-size: 24px;}
+.ban_jiekuan_apply_in1_c { padding-top:10px; font-size:16px}
+.ban_jiekuan_apply_in2 { width: 160px; height:160px; border-radius:160px; background-color:#a4b2c9; top:130px; right:0px; }
+.ban_jiekuan_apply_in2_t { height: 60px; line-height: 60px; font-size:20px; }
+.ban_jiekuan_apply_in3 { width:140px; height:140px; border-radius:140px; top: 180px; left: -460px; }
+
+.ban_lijiapply_btn { position: absolute; top: -90px; right: 412px; z-index: 999; text-align: center; background:#f53e31; width: 200px; height: 200px; border-radius: 200px; }
+.ban_lijiapply_btn a { display: block; padding-top: 60px; font-size: 36px; color: #fff; text-decoration: none; }
+.ban_lijiapply_btn a i.ban_dare { position: absolute; top: 140px; left: 70px; float: left; width: 58px; height: 30px; background: url(../images/ban_apply_spoint.png) no-repeat;animation: upDown .8s linear infinite alternate;-moz-animation:  upDown .8s linear infinite alternate; -webkit-animation:  upDown .8s linear infinite alternate; -o-animation:  upDown .8s linear infinite alternate; }
+@-webkit-keyframes upDown {
+	0% {top: 130px; opacity:0.2;}
+	50% { top: 140px; opacity:0.6;}
+	100% {top:150px; opacity:1;}
+}
+
+@-moz-keyframes upDown {
+	0% {top: 130px; opacity:0.2;}
+	50% { top: 140px; opacity:0.6;}
+	100% {top:150px; opacity:1;}
+}
+@keyframes upDown {
+	0% {top: 130px; opacity:0.2;}
+	50% { top: 140px; opacity:0.6;}
+	100% {top:150px; opacity:1;}
+}
+/*--我要借款 9.2--*/
+.ban_jiekuan_images { position: relative; width: 100%; height: 756px; }
+.ban_jiekuan_img1 { background: url(../images/ban_jiekuan_img1.jpg) no-repeat top center; height: 203px; }
+.ban_jiekuan_img2 { background: url(../images/ban_jiekuan_img2.jpg) no-repeat top center; height: 198px; }
+.ban_jiekuan_img3 { background: url(../images/ban_jiekuan_img3.jpg) no-repeat top center; height: 355px; }
+
+/*班汇宝*/
+.ban_quckjoin { position: absolute; top: 140px; left: 10px; float: left; width: 210px; height: 61px; background: url(../images/ban_quckjoin.png) no-repeat;animation: upDown .8s linear infinite alternate;-moz-animation:  upDown .8s linear infinite alternate; -webkit-animation:  upDown .8s linear infinite alternate; -o-animation:  upDown .8s linear infinite alternate; }
+@-webkit-keyframes upDown {
+	0% {top: 135px; opacity:0.5;}
+	50% { top: 140px; opacity:0.8;}
+	100% {top:145px; opacity:1;}
+}
+
+@-moz-keyframes upDown {
+	0% {top: 135px; opacity:0.5;}
+	50% { top: 140px; opacity:0.8;}
+	100% {top:145px; opacity:1;}
+}
+@keyframes upDown {
+	0% {top: 135px; opacity:0.5;}
+	50% { top: 140px; opacity:0.8;}
+	100% {top:145px; opacity:1;}
+}
+.ban_qitou_img { position: absolute; top: -18px; left: 35px; background: url(../images/ban_qitou.gif) no-repeat; width: 65px; height: 25px}
+.ban_detail_width_150 { width: 125px}
+.ban_detail_width_180 { width: 170px}
+.ban_detail_width_400 { width: 400px}
+
+/*首页三个标签进去页面2015.8.20*/
+.ban_address_bt { padding: 20px; font-size: 14px; }
+.ban_address_bt a { color: #000; text-decoration: none; }
+.ban_address_bt a:hover { color: #d9272e; }
+.ban_thirdbg { width: 100%; background: #fff; }
+.ban_web_box:after { clear: both; display: block; content: ""; overflow: hidden; }
+.ban_web_box { width: 1025px; margin: 0 auto; vertical-align: middle; }
+.ban_contimg_box { float: left; width: 800px; }
+.ban_indbtn_left,.ban_indbtn_right { width: 112px; width: 42px; }
+.ban_indbtn_left { float: left; margin-right: 70px; }
+.ban_indbtn_right { float: right; }
+.ban_indbtn_left .ban_indbtn_left_a,.ban_indbtn_right .ban_indbtn_right_a { float: left; width: 42px; height: 92px; background: url(../images/ban_rlbutton.png) no-repeat; }
+
+.ban_indbtn_left .ban_indbtn_left_a { background-position: -42px 0; }
+.ban_indbtn_right .ban_indbtn_right_a { background-position: 0 0; }
+.ban_indbtn_left .ban_indbtn_left_a:hover { background-position: -126px 0; }
+.ban_indbtn_right .ban_indbtn_right_a:hover { background-position: -84px 0; }
+.ban_btn_margin1 { margin-top: 450px; }
+.ban_btn_margin2 { margin-top: 330px; }
+.ban_btn_margin3 { margin-top: 822px; }
+
+
+/*--了解我们--2015.8.24*/
+.ban_about_box,.ban_turn_box,.ban_case_box,.ban_partner_box,.ban_help_partform,.ban_risk_point { padding-bottom: 80px; line-height: 28px; text-shadow: -1px 1px 1px #fff; }
+.ban_about_box h1,.ban_turn_box h1,.ban_case_box h1,.ban_partner_box h1,.ban_help_box h1 { color: #d70c18; font-size: 20px; }
+.ban_about_box strong { font-size: 16px; }
+.ban_about_box img { margin: 20px 0; }
+.ban_turn_box h2,.ban_partner_box h2,.ban_about_box h2 { display: inline-block; padding-right: 15px; font-size: 16px; line-height: 30px; border-bottom: 1px solid #d70c18; }
+.ban_turn_box h2 em { padding-left: 10px; font-size: 14px; font-style: normal; }
+.ban_lingdaobox { position: relative; padding-bottom: 30px; margin-bottom: 20px; border-bottom: 1px dashed #ddd; }
+.ban_lingdaobox i,.ban_lingdaobox dfn,.ban_partheight i,.ban_partheight dfn { position: absolute; bottom: -1px; float: left; width: 8px; height: 1px; background: #d70c18; }
+.ban_lingdaobox i,.ban_partheight i { left: 0; }
+.ban_lingdaobox dfn,.ban_partheight dfn { right: 0; }
+.ban_lingdaobox:after,.ban_partner_box:after { clear: both; display: block; content: ""; }
+.ban_lingdaobox p,.ban_case_box p { text-indent: 30px; }
+.ban_lingdaobox img { float: left; margin: 8px 20px 20px 0;  }
+.ban_turn_box .ban_a { font-family: Arial; }
+.ban_case_box div img { margin: 20px auto; display: block; }
+.ban_partner_box h2 { border: none; margin-bottom: 0; }
+.ban_partner_left,.ban_partner_right { position: relative; float: left; width: 345px; padding: 20px 20px 20px 0; }
+.ban_partner_box .ban_partheight { border-bottom: 1px dashed #ddd; }
+.ban_partner_left { border-right: 1px dashed #ddd; }
+.ban_partner_right { padding: 20px 0 20px 20px; }
+.ban_partheight { position: relative; width: 345px; height: 320px; margin-bottom: 30px; }
+.ban_partheight i,.ban_partheight dfn { background: #999; }
+.ban_about_box span.ban_tel_num,.ban_zhanghu_safe_cont span.ban_tel_num { color: #d70c18; }
+.ban_jobbox_left { float: left; width: 480px; padding-bottom: 50px; }
+.ban_jobbox_left_div h1,.ban_zhanghu_safe h2 { background: #eeeeef; -webkit-border-radius: 8px 8px 0 0; cursor: pointer; font-size: 16px; margin: 0; margin-top: 15px; padding: 8px 20px; color: #333; font-weight: bold; }
+.ban_jobbox_left_div h1 i { float: right; font-style: normal; color: #d70c18; font-size: 14px; }
+.ban_jobbox_left_cont,.ban_zhanghu_safe_cont { background: #fff; padding: 20px; border: 3px solid #eeeeef; border-top: none; -webkit-border-radius: 0 0 8px 8px; }
+.ban_jobbox_way { margin-top: 40px; padding: 15px 10px 10px 20px; line-height: 30px; font-size: 16px; -webkit-border-radius: 8px 8px 0 0; border-top: 1px solid #ddd; }
+.ban_jobbox_right { float: right; width: 260px; padding-bottom: 50px; }
+.ban_jobbox_right h5 { margin: 0; color: #333; font-size: 14px; font-weight: lighter; }
+.ban_jobbox_right h3 { font-size: 20px; margin: 0; color: #d70c18; }
+.ban_jobbox_right p { font-weight: bold; margin-bottom: 30px; }
+.ban_jobbox_right p i,.ban_help_partform p i { font-weight: lighter; font-size: 20px; color: #d70c18; padding-right: 15px; }
+
+/*--帮助--2015.8.24*/
+.ban_help_box { padding-bottom: 60px; }
+.ban_help_partform { text-align: center; }
+.ban_help_partform h3 { font-size: 18px; }
+.ban_help_partform p { font-size: 16px; line-height: 36px; font-weight: bold; }
+.ban_help_partform a.ban_chakan { display: block; margin: 50px 0; padding: 10px 40px; font-size: 20px; }
+.ban_risk_point p { text-indent: 30px; line-height: 30px; }
+.ban_risk_point .ban_risk_div { padding-left: 30px; }
+.ban_risk_point .ban_risk_div p { text-indent: 0; }
+.ban_risk_point h2 { font-size: 28px; text-align: center; margin-top: 40px; line-height: 34px; }
+.ban_risk_point h3,.ban_risk_point h4 { font-size: 20px; text-align: center; margin: 40px 0; }
+.ban_risk_point h5 { font-size: 18px; text-align: center; margin: 0; margin-bottom: 40px; }
+.ban_risk_point h4 { text-align: left; }
+.ban_zhanghu_safe_cont span { font-weight: bold; color: #d70c18; }
+
+/*--银联--*/
+.ban_ums { padding: 30px 0 120px; }
+.ums_explain_ask h1.title { font-size: 24px; }
+.ums_explain_ask,.ums_explain,.ums_explain_2 { font-size: 16px; line-height: 30px; }
+
+/*--借款人-2015.9.7--*/
+.ban_jiekuan_tel { float: right; color: #000; margin: 25px 0 0; text-align: right; }
+.ban_jiekuan_tel .ban_follow_a { background-color: #8c8c8c; }
+.ban_jiekuan_tel li div.ban_follow { float: right; margin: 0; width: 300px; height: 40px; }
+.ban_jiekuan_tel .ban_tel_num { color: #d9272e; font-size: 24px; }
+.ban_jiekuan_bg { background:url(../images/ban_jiekuan_bg.png) no-repeat center 130px; }
+.ban_jingli_font { padding-top: 230px; background: url(../images/ban_jingli_font.png) no-repeat center 100px;}
+.ban_jiekuan_loginbg,.ban_touzi_loginbg { border-top-right-radius: 8px; border-bottom-right-radius: 8px; background: url(../images/ban_jiekuan_loginbg.png) repeat; border: 1px solid #b1c0df; height: 308px; border-left: none; }
+.ban_jiekuan_cont { padding: 50px 60px 100px; font-family: 微软雅黑; font-size: 18px; line-height: 30px}
+.ban_jiekuan_cont .ban_hui_cont { padding: 20px 0 0; font-size: 30px; font-weight: lighter; }
+.ban_hui_p { padding-top: 20px}
+.ban_jiekuan_group a { padding-right: 30px}
+
+.ban_fengbi_box { background: #fff; }
+
+/*-特殊投资人登录--*/
+.ban_touzi_loginbg { width: 350px; padding-left: 600px; margin-top: 30px; background: #fff url(../images/ban_teshu_bg.png) no-repeat left; border: 1px solid #f13c3e}
+
+
+/*--班汇宝详细--*/
+.ban_zijin_jiegou {/* background: url(../images/ban_zijin_jiegou.jpg) no-repeat center;*/ height: 310px; padding: 60px 0; }
+.ban_touzi_zuhe {/* background: url(../images/ban_touzi_zuhe.jpg) no-repeat 80px top;*/ margin-top: 40px; text-align: center }
+.ban_fengxian_tishi {/* background: url(../images/ban_fengxian_tishi.jpg) no-repeat 200px top;*/ padding: 30px 0 0 60px; margin-top: 40px; line-height: 30px; text-align: center }
+.ban_shouyi_fenpei {/* background: url(../images/ban_shouyi_fenpei.jpg) no-repeat 40px top;*/  margin-top: 60px; text-align: center }
+.ban_num_font { color: #0099ff; font-weight: bold}
+.ban_danbao_tiaoli {/* background: url(../images/ban_danbao_tiaoli.jpg) no-repeat 100px top;*/ height: 370px; padding: 50px 0 0 0; margin-top: 40px; text-align: center }
+.ban_danbao_h5 { font-size: 24px; line-height: 36px; margin: 0}
+.ban_shouyi_p,.ban_shouyi_fenpei,.ban_danbao_tiaoli,.ban_fengxian_tishi,.ban_touzi_zuhe { font-size: 16px; line-height: 30px; font-family: 微软雅黑; }
+/*.ban_tuijian_daoyu { background: url(../images/ban_tuijian_daoyu.jpg) no-repeat 40px 40px; }*/
+.ban_bao_imgcenter { margin-top: 20px; text-align: center; padding: 10px 20px}
+.ban_bao_imgcenter img { max-width: 980px}
+
+
+/*--消息中心----*/
+.ban_top_newsicon,.ban_news_noread_p,.ban_news_read_p { position:relative; float: right; margin: 11px 0 0 20px; display:inline-block; width: 22px; height: 20px}
+.ban_top_newsicon_read { background: url(../images/ban_news_read.png) no-repeat;}
+
+.ban_news_noread_box { background: #fff; width: 100%}
+.ban_news_noread_li:after,.ban_news_d_box:after,.ban_news_d_div:after { content: ""; clear: both; display: block}
+.ban_news_noread_li { padding: 20px 0; border-bottom: 1px dashed #ddd}
+.ban_news_noread_li:hover { background: #eee}
+.ban_news_noread_li a { color: #000}
+.ban_news_noread_li a:hover { color: #666}
+.ban_news_noread_p,.ban_news_read_p { float: left; left: 10px; top: -8px; background: url(../images/ban_news_noread.png) no-repeat; width: 80px; height: 72px}
+.ban_news_read_p { background: url(../images/ban_news_read.png) no-repeat}
+.ban_news_noread_cont { float: right; width: 890px}
+.ban_news_noread_title { margin: 14px 0 6px; font-size: 18px; font-weight: bold; display: inline-block; color: #d9272e}
+.ban_news_noread_brief { height: 24px; overflow: hidden}
+.ban_news_noread_time { font-size: 14px; font-weight: normal; display: inline-block; margin-left: 8px; color: #666}
+.ban_news_read_title { color: #000}
+.ban_news_noread_p .ban_account_msg { top: 10px}
+.ban_news_d_div { padding: 50px 0; font-size: 16px}
+.ban_news_d_div .ban_index_attorn_a { float: right; margin: 40px 0 0; padding: 8px 40px}
+.ban_news_d_box { line-height: 36px}
+.ban_news_d_title { float: left; width: 150px; text-align: right; font-weight: bold}
+.ban_news_d_name { float: right; width: 850px}
+.ban_news_d_next { text-align: right; display: block; padding: 50px 0 0}
+.ban_news_d_next_a { padding: 0 30px; color: #48a3e5; text-decoration: none}
+.ban_news_d_next_a:hover { text-decoration: underline}
+
+/*2016-4-25首页banner下三张图*/
+.ban_second_img { position: relative; width: 1038px; padding: 15px 0 40px}
+.ban_second_img a { display: inline-block; width: 333px; height: 168px; text-decoration: none; margin-right: 10px; position: relative; top: 0; -webkit-transition: all .2s ease;-moz-transition: all .2s ease;-o-transition: all .2s ease;-ms-transition: all .2s ease;transition: all .2s ease;}
+.ban_second_img a.ban_second_zhuce { background: url(../images/ban_13.jpg) no-repeat}
+.ban_second_img a.ban_second_jiekuan { background: url(../images/ban_15.jpg) no-repeat}
+.ban_second_img a.ban_second_erji { background: url(../images/ban_17.jpg) no-repeat}
+.ban_second_img a em,.ban_second_img a dfn { display: block; color: #fff}
+.ban_second_img a em { font-size: 34px; padding: 25px 0 10px 40px; font-weight: lighter}
+.ban_second_img a em:after { content: ">"; width: 20px; height: 20px; position: absolute; top: 25px; right: 40px; font-weight: lighter}
+.ban_second_img a dfn { font-size: 14px; font-family: 宋体; padding: 0 0 0 40px; line-height: 24px}
+.ban_second_img a:hover { position: relative; top: -3px;}
+
+/*2016-5-12 换成江西银行*/
+
+.ban_jiangxi_bank { padding: 80px 0 92px 50px; background: url(../images/ban_jiangxi.jpg) no-repeat; font-size: 30px; color: #f39100; border-bottom: 1px solid #f1e8bf}
+.ban_jiangxi_bank i { font-size: 36px; color: #ff6204}
+.ban_kaitong_jx { text-align: center; padding-top: 50px}
+.ban_kaitong_jx a.ban_button_hilite,.ban_kaitong_jx a.ban_button_default,.ban_kaitong_jx input.ban_button_hilite,.ban_kaitong_jx input.ban_button_default { padding: 5px 40px; font-size: 20px; font-weight: bold; background-color: #ff6204}
+.ban_kaitong_jx a.ban_button_default,.ban_kaitong_jx input.ban_button_default { background-color: #aaa}
+.ban_kaitong_jx input.ban_button_hilite,.ban_kaitong_jx input.ban_button_default { padding: 0 20px}
+.ban_bank_tuoguan { display: inline-block; margin-left: 10px; color: #ff6204; font-weight: bold}
+.ban_bank_tuoguan:hover { color: #000}
+.ban_bank_cardlist { width: 500px}
+.ban_bank_cardlist a { display: inline-block; margin: 0 6px 6px 0; padding: 2px; background-color: #f8f7f1; border: 1px solid #dededc; width: 100px; height: 34px; box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 1px rgba(0, 0, 0, 0.2);}
+.ban_bank_cardlist a:hover { border: 1px solid #f60}
+.ban_bank_cardlist img{ display: inline-block; width: 100%}
+.ban_jiangxi_search_ul { padding: 20px 0; margin-bottom: 20px; background-color: #f9faeb; border-bottom: 1px solid #f1e8bf; box-shadow: inset 0 3px 1px rgba(240,145,0,.05)}
+.ban_jiangxi_search_ul li { display: inline-block; width: 220px; text-align: center}
+.ban_jiangxi_search_ul li em { font-size: 20px; color: #f60; padding: 0 5px}
+.ban_jiangxi_search_table { margin-top: 50px}
+.ban_jiangxi_search_table em { font-size: 24px; display: block; padding-bottom: 15px}
+.ban_jiangxi_search_table th,.ban_jiangxi_search_table td { padding: 10px 5px 10px 20px}
+.ban_jiangxi_search_table td { border-bottom: 1px solid #eaeaea; border-right: 1px solid #eaeaea; border-left: 1px solid #eaeaea}
+
+.ban_tixian_class { margin: 20px 0; border-bottom: 1px solid #ccc}
+.ban_tixian_class li { display: inline-block}
+.ban_tixian_class li a { display: inline-block; padding: 10px 20px 9px; margin-right: 10px; font-size: 18px; text-decoration: none; color: #000}
+.ban_tixian_class li a.ban_tixian_a_current { border-bottom: 3px solid #d9272e; color: #d9272e; font-weight: bold}
+.ban_tishi_font { padding: 5px 0 10px 225px; color: #000}
+.ban_bankimg_bg,.ban_font_jxtishi { border-radius: 12px; background-color: #f9faeb; border: 1px dashed #e8d78c; color: #7d5d04; font-size: 16px; border-radius: 4px; margin: 0 0 15px 225px; width: 450px; padding: 5px 20px;}
+.ban_font_jxtishi { margin: 30px 0 0 225px; background-color: #eef5fc; border: 1px dashed #97c8ff; font-size: 16px; padding: 10px 20px; color: #245183; line-height: 30px;}
+.ban_bankimg_list { margin: 0 0 45px 100px; width: 550px; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .2); -moz-box-shadow:0 0 3px rgba(220, 200, 110, .6); box-shadow:0 0 3px rgba(220, 200, 110, .6);}
+.ban_bankimg_list .ban_bank_cardlist { padding: 10px 0 20px 50px}
+.ban_bank_datx { margin: 0 0 15px 175px; font-size: 14px; width: 500px}
+
+.ban_spandpsd_bg { background: url(../images/ban_psd_18.jpg) no-repeat top; padding: 100px 0 100px; border-bottom: 1px solid #f1e8bf}
+.ban_spandpsd_bg .ban_infobox_label { width: 140px; padding-right: 10px}
+.ban_spandpsd_bg .ban_kaitong_jx { text-align: left; margin-left: 155px}
+.ban_spandpsd_font { color: #7d5d04; margin: 0 0 0 155px}
+
+/*.ban_jiebang_bank { padding: 0 0 0 126px}
+.ban_jiebang_bank img { display: inline-block; position: relative; top: 13px }*/
+.ban_jiebang_bank span { display: inline-block; padding-right: 10px}
+.ban_jiebang_bank span i { display: inline-block; padding: 0 5px; font-size: 20px}
+.ban_bangding_zh { padding: 0 0 50px 30px; font-size: 18px}
+.ban_bangding_zh span { padding: 0 5px; font-size: 24px}
+
+.ban_jiangxi_payway { position: relative; top: -10px; padding-bottom: 30px; border-bottom: 1px solid #eaeaea}
+.ban_jiangxi_payway .ban_single_input_t { position: relative; vertical-align: top; font-weight: bold; width: 130px; text-align: right}
+.ban_jiangxi_payway .ban_single_input_u_c { position: relative; left: -10px; width: 510px; font-size: 16px; line-height: 30px}
+.ban_jiangxi_payway em { color: #000; font-size: 14px; font-weight: bold}
+.ban_jiangxi_payway dfn { color: #d24545; font-size: 22px }
+.ban_jiangxi_payway i { position: absolute; top: -45px; left: 40px; background: url(../images/ban_tj_pay.png) no-repeat; display: inline-block; width: 50px; height: 41px}
+.ban_jiangxi_payway .ban_single_input_u_c span { padding: 0 5px; font-weight: bold; font-size: 16px; color: #d24545;}
+
+.ban_jx_czsuess .ban_result_succeed { padding: 60px 0 0 180px}
+.ban_jx_czsuess .ban_result_t { padding-top: 30px}
+.ban_jx_czsuess .ban_result_t em { color: #d24545; font-size: 20px; padding: 0 5px}
+.ban_jx_czsuess span { display: block; font-size: 16px; padding: 0 40px 80px 100px }
+
+.ban_jx_xieyi { width: auto}
+.ban_jx_xieyi a { position: relative; color: #f60; margin: 0 20px 0 10px; text-decoration: none; border-bottom: 1px solid #f60}
+.ban_jx_xieyi a:hover { border-bottom: none; color: #666}
+.ban_jx_xieyi a:after { content:""; width: 4px; height: 4px; background: #f60; position: absolute; top: 8px; left: -10px}
+ 
+/*-2016-7-11资产概况-*/ 
+.ban_page_title .ban_databig_u { float: right; margin: 7px 0 0} 
+.ban_use_dongjie { padding: 20px 0}
+.ban_use_dongjie li { display: inline-block; padding-right: 100px; font-size: 16px}
+.ban_use_dongjie li strong { padding-left: 10px}
+.ban_chong_t_btn { position: absolute; top: 110px; right: 25px}
+.ban_zhzc_box { margin: 20px 0} 
+.ban_zhzc_box h5 { font-size: 18px}
+.ban_zhzc_ul li { display: inline-block; width: 180px; height: 150px; margin-top: 10px; background: url(../images/ban_round.png) no-repeat center top; text-align: center;}
+.ban_zhzc_ul li em,.ban_zhzc_ul li i { display: block; margin: 10px 0 0; font-weight: bold; font-size: 14px}
+.ban_zhzc_ul li dfn { display: block; margin: 30px 0 0; font-size: 16px}
+.ban_zhzc_ul li em { color: #d24545}
+.ban_zhzc_ul li i { color: #07b670}
+
+.ban_open_box { position: relative; height: 150px; padding: 60px 0 0; background-color: #ffffeb; text-align: center}
+.ban_open_box em { display: black; font-weight: bold; padding: 20px 0; color: #d24545; font-size: 16px; line-height: 26px}
+.ban_open_box a.ban_button_hilite { position: absolute; bottom: 25px; left: 45px; font-size: 18px; display: block; width: 160px; text-align: center}
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2),only screen and (max-width: 720px), screen and (orientation:portrait) {
+	
+
+
+
+
+
+
+}

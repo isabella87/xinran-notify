@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project default="war" basedir=".">
+	<property name="app.name" value="xinran-notify" />
+	<property name="app.war" value="${app.name}.war" />
+	<property name="app.copyright" value="" />
+
+	<property name="src.dir" value="src" />
+	<property name="src.encoding" value="utf-8" />
+	<property name="web.dir" value="WebContent" />
+	<property name="lib.dir" value="WebContent/WEB-INF/lib" />
+	<property name="build.dir" value="build" />
+	<property name="dist.dir" value="dist" />
+	<property name="docs.dir" value="docs" />
+
+	<target name="init">
+		<delete dir="${build.dir}" failonerror="false" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<target name="compile" depends="init">
+			<javac srcdir="${src.dir}" excludes="**/test/**" destdir="${build.dir}" debug="true" encoding="${src.encoding}" includeantruntime="false">
+				<classpath>
+					<fileset dir="${lib.dir}">
+						<include name="*.jar" />
+					</fileset>
+				</classpath>
+			</javac>
+			<copy todir="${build.dir}" overwrite="true" force="true" quiet="true" failonerror="false">
+				<fileset dir="${src.dir}">
+					<include name="**/*.html" />
+					<include name="**/*.TTF" />
+					<include name="**/*.ttf" />
+					<include name="**/*.txt" />
+					<include name="**/*.png" />
+					<include name="**/*.properties" />
+				</fileset>
+			</copy>
+		</target>
+	
+	<target name="war" depends="compile">
+		<delete file="${dist.dir}/${app.war}" failonerror="false" />
+		<war destfile="${dist.dir}/${app.war}" webxml="${web.dir}/WEB-INF/web.xml">
+			<fileset dir="${web.dir}">
+				<exclude name="**/*.bak" />
+				<exclude name="/WEB-INF/web*.xml" />
+			</fileset>
+			<lib dir="${lib.dir}">
+				<exclude name="**/*src*" />
+				<exclude name="**/*source*" />
+				<exclude name="**/*doc*" />
+			</lib>
+			<classes dir="${build.dir}" />
+		</war>
+	</target>
+</project>
